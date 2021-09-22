@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/updateuser.css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="/about">About</a>
+    </div>
+    <div class="updateimage">
+      <img src="/css/updateuser.png" />
+    </div>
+    <div class="registration">
+      <h1 class="registrationheader">Update Info:</h1>
+      <form method="POST" action="/userinfo">
+        <label for="password">Password</label><br />
+        <input type="text" name="password" id="password" size="30" /><br />
+        <label for="confirmpassword">Confirm Password:</label><br />
+        <input
+          type="text"
+          name="confirmpassword"
+          id="confirmpassword"
+          size="30"
+        /><br />
+        <label for="phonenumber">Tel:</label><br />
+        <input
+          type="text"
+          name="phonenumber"
+          id="phonenumber"
+          size="30"
+        /><br />
+        <label for="address">Address:</label><br />
+        <input type="text" name="address" id="address" size="30" /><br />
+        <label for="city">City:</label><br />
+        <input type="text" name="city" id="city" size="30" /><br /><br />
+        <button class="registrationbutton" type="submit" value="submit">
+          📓✒️➡️</button
+        ><br /><br />
+      </form>
+    </div>
+
+    <footer class="footerclass">
+      <p>Author:Tanvir khan</p>
+    </footer>
+    <div style="margin-top: 100px"></div>
+  </body>
+</html>

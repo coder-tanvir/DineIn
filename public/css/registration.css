@@ -1,0 +1,66 @@
+body {
+  background-image: url('registration.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.topnav {
+  background-color: none;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  -webkit-text-stroke-color: blueviolet;
+  -webkit-text-stroke-width: 0.2px;
+  font-weight: bolder;
+  float: right;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: royalblue;
+}
+
+/* Add a color to the active/current link */
+
+.footerclass {
+  position: absolute;
+  bottom: 0.2%;
+  left: 2%;
+}
+
+.registration {
+  font-size: 20px;
+  -webkit-text-stroke-color: blueviolet;
+  -webkit-text-stroke-width: 0.7px;
+  background-color: none;
+  color: White;
+  width: 230px;
+  border: none;
+  margin-left: 42%;
+  margin-top: 17%;
+}
+.registration h1 {
+  margin-left: 17%;
+}
+a:hover {
+  color: white;
+}
+
+.registrationbutton {
+  height: 32px;
+  width: 100px;
+  margin-left: 27%;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: blueviolet;
+}
+
+.registrationbutton:hover {
+  background-color: blueviolet;
+}

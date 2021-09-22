@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Ribeye';
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url('pineapple.jpg');
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.topnav {
+  background-color: none;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: royalblue;
+  float: left;
+  color: #ff00d6;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 150px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #7c9be3;
+}
+
+/* Add a color to the active/current link */
+
+.wrapper {
+  display: flex;
+  width: 95%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  position: relative;
+  flex: 1 1 calc(18% - 20px);
+  border: solid 2px black;
+  width: 20%;
+  max-width: 20%;
+  height: 300px;
+  padding: 0rem;
+  margin-top: 50px;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease-in-out;
+  opacity: 0.8;
+  margin-left: 15px;
+  flex-basis: 1;
+}
+
+.card:hover {
+  transform: translateY(20px);
+  opacity: 1;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(0.2px);
+}
+
+.card:hover img {
+  filter: none;
+}
+.info p {
+  font-family: 'Ribeye';
+  font-weight: bolder;
+}
+.card .info {
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.2px;
+  margin-top: 110px;
+  position: absolute;
+  z-index: 3;
+  color: #ff00d6;
+  opacity: 1;
+  transform: translateY(30px);
+  transition: 0.5s all;
+}
+
+.info:hover {
+  font-weight: 1000px;
+  color: chartreuse;
+}
+
+.wholebutton {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}

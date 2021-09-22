@@ -1,0 +1,108 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/css/updateweekly.css")
+        title Update WeeklyMenu
+    body
+        .topnav
+            a(href='/') Home
+            a(href='/showweeklymenus') WeeklyMenus
+        h1.nameontop='PLEASE EDIT YOUR WEEKLY MENU'
+        h1.nameontop=`${updatepost.servicename}`
+        
+        form(method="POST" action='/updateweeklymenu')
+            .flexbox 
+                .container1
+                    h1="Information:"
+                    p=`Name of the service:`
+                    input(type="text" name="servicename" value=`${updatepost.servicename}`)
+                    p=`🏘️Adress:`
+                    input(type="text" name ="area" value=`${updatepost.area}`) 
+                    p=`☎️ Phonenumber:`
+                    input(type="text" name ="phonenumber" value=`${updatepost.phonenumber}`) 
+                    p=`🍽️Type of food:`
+                    input(type="text" name="typeoffood" value=`${updatepost.typeoffood}`)
+                    p=`Number of menu:`
+                    input(type="text" name="numberofmenu" value=`${updatepost.numberofmenu}`)
+                    p=`🚚 Service Method:`
+                    input(type="text" name="servicemethod" value=`${updatepost.servicemethod}`)
+                    p='Frequency:'
+                    input(type="text" name="frequency" value=`${updatepost.frequency}`)
+                    p="Social Media Link"
+                    input(type="text" name="link" value=`${updatepost.link}`)
+                    p="deals"
+                    input(type="text" name="deals" value=`${updatepost.deals}`)
+
+                .menu1
+                    h1="Menu 1"
+                    p="Price"
+                    input(type="text" name="price" value=`${updatepost.price}`)
+                    p='Monday:'
+                    input(type="text" name="mondayitem" value=`${updatepost.mondayitem}`)
+                    p='tuesday:'
+                    input(type="text" name="tuesdayitem" value=`${updatepost.tuesdayitem}`)
+                    p='Wednesday:'
+                    input(type="text" name="wednesdayitem" value=`${updatepost.wednesdayitem}`)
+                    p='Thursday:'
+                    input(type="text" name="thursdayitem" value=`${updatepost.thursdayitem}`)
+                    p='Friday:'
+                    input(type="text" name="fridayitem" value=`${updatepost.fridayitem}`)
+                    p='Saturday:'
+                    input(type="text" name="saturdayitem" value=`${updatepost.saturdayitem}`)
+                    p='Sunday:'
+                    input(type="text" name="sundayitem" value=`${updatepost.sundayitem}`)
+
+
+                .menu2
+                    h1="Menu 2"  
+                    p="Price"
+                    input(type="text" name="menu2price" value=`${updatepost.menu2price}`)
+                    p='Monday:'
+                    input(type="text" name="menu2mondayitem" value=`${updatepost.menu2mondayitem}`)
+                    p='tuesday:'
+                    input(type="text" name="menu2tuesdayitem" value=`${updatepost.menu2tuesdayitem}`)
+                    p='Wednesday:'
+                    input(type="text" name="menu2wednesdayitem" value=`${updatepost.menu2wednesdayitem}`)
+                    p='Thursday:'
+                    input(type="text" name="menu2thursdayitem" value=`${updatepost.menu2thursdayitem}`)
+                    p='Friday:'
+                    input(type="text" name="menu2fridayitem" value=`${updatepost.menu2fridayitem}`)
+                    p='Saturday:'
+                    input(type="text" name="menu2saturdayitem" value=`${updatepost.menu2saturdayitem}`)
+                    p='Sunday:'
+                    input(type="text" name="menu2sundayitem" value=`${updatepost.menu2sundayitem}`)
+                .menu3
+                    h1="Menu 3"
+                    p="Price"
+                    input(type="text" name="menu3price" value=`${updatepost.menu3price}`) 
+                    p='Monday:'
+                    input(type="text" name="menu3mondayitem" value=`${updatepost.menu3mondayitem}`)
+                    p='tuesday:'
+                    input(type="text" name="menu3tuesdayitem" value=`${updatepost.menu3tuesdayitem}`)
+                    p='Wednesday:'
+                    input(type="text" name="menu3wednesdayitem" value=`${updatepost.menu3wednesdayitem}`)
+                    p='Thursday:'
+                    input(type="text" name="menu3thursdayitem" value=`${updatepost.menu3thursdayitem}`)
+                    p='Friday:'
+                    input(type="text" name="menu3fridayitem" value=`${updatepost.menu3fridayitem}`)
+                    p='Saturday:'
+                    input(type="text" name="menusaturdayitem" value=`${updatepost.menu3saturdayitem}`)
+                    p='Sunday:'
+                    input(type="text" name="menu3sundayitem" value=`${updatepost.menu3sundayitem}`)
+
+            input.submitbutton(type="submit" value="🔄🔄🔄") 
+
+
+
+
+
+        
+
+
+        
+            
+
+            

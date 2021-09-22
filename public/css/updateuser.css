@@ -1,0 +1,63 @@
+body {
+  background-color: peachpuff;
+}
+.topnav {
+  background-color: none;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.registration {
+  font-size: 20px;
+  -webkit-text-stroke-color: blueviolet;
+  -webkit-text-stroke-width: 0.7px;
+  background-color: none;
+  color: White;
+  margin-left: 40%;
+  margin-top: 5px;
+  width: 230px;
+  border: none;
+}
+
+a:hover {
+  color: white;
+}
+
+.registrationbutton {
+  height: 32px;
+  width: 100px;
+  margin-left: 27%;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: blueviolet;
+}
+
+.registrationbutton:hover {
+  background-color: blueviolet;
+}
+
+.updateimage {
+  width: 200px;
+  height: 200px;
+  margin-left: 35%;
+}

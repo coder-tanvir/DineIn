@@ -1,0 +1,84 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href='/css/menudetails.css')
+        title `{menuone.servicename}`
+    body(style=`background-image:url(../uploads/${menuone.avatar})`)
+        .topnav
+            a.active(href='#home') Home
+            a(href='#news') Newss
+
+        .eggbox(style=`background-image:url(../uploads/${menuone.avatar})`)
+            p.businessname=`${menuone.servicename}`
+            p.area=`🏠Area:${menuone.area}`
+            p.phonenumber=`☎️ Tel: ${menuone.phonenumber}`
+            p.processingtime=`⌛ ${menuone.processingtime}`
+            p.method=`🚚 Del/Pick:${menuone.servicemethod}`
+
+        .flex_container
+            .appetizers
+                h1="Appetizers:"
+                p=`${menuone.appetizers[0]}`
+                p=`${menuone.appetizers[1]}`
+                p=`${menuone.appetizers[2]}`
+                p=`${menuone.appetizers[3]}`
+                p=`${menuone.appetizers[4]}`
+                p=`${menuone.appetizers[5]}`
+                p=`${menuone.appetizers[6]}`
+            .meats 
+                h1="Meats:"
+                p=`${menuone.meats[0]}`
+                p=`${menuone.meats[1]}`
+                p=`${menuone.meats[2]}`
+                p=`${menuone.meats[3]}`
+                p=`${menuone.meats[4]}`
+                p=`${menuone.meats[5]}`
+                p=`${menuone.meats[6]}`
+                p=`${menuone.meats[7]}`
+                p=`${menuone.meats[8]}`
+                p=`${menuone.meats[9]}`
+                p=`${menuone.meats[10]}`
+                p=`${menuone.meats[11]}`
+                p=`${menuone.meats[12]}`
+            .dishes 
+                h1="Dishes:"
+                p=`${menuone.dishes[0]}`
+                p=`${menuone.dishes[1]}`
+                p=`${menuone.dishes[2]}`
+                p=`${menuone.dishes[3]}`
+                p=`${menuone.dishes[4]}`
+                p=`${menuone.dishes[5]}`
+                p=`${menuone.dishes[6]}`
+                p=`${menuone.dishes[7]}`
+                p=`${menuone.dishes[8]}`
+                p=`${menuone.dishes[9]}`
+                p=`${menuone.dishes[10]}`
+            .desserts
+                h1="Desserts:"
+                p=`${menuone.desserts[0]}`
+                p=`${menuone.desserts[1]}`
+                p=`${menuone.desserts[2]}`
+                p=`${menuone.desserts[3]}`
+                p=`${menuone.desserts[4]}`
+                p=`${menuone.desserts[5]}`
+                p=`${menuone.desserts[6]}`
+                p=`${menuone.desserts[7]}`
+                p=`${menuone.desserts[8]}`
+                p=`${menuone.desserts[9]}`
+                p=`${menuone.desserts[10]}`
+
+
+
+
+
+
+                
+
+                        
+                
+                
+
+

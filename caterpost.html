@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catering Weekly Posting</title>
+    <link rel="stylesheet" href="/css/caterpost.css" />
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Ribeye"
+  />
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/">Food🦛Hippo</a>
+      <a href="/searchweeklymenu">Search By Location</a>
+      <a href="showweeklymenus">Weekly Menus</a>
+      <a href="/menuoverview">Menus</a>
+    </div>
+    
+    <div class="flexbox">
+      <div class="initialbox">
+        <p class="weeklymenuheader">Enter Information: </p>
+        <form method="post" action="/caterpost" enctype="multipart/form-data">
+          <label for="servicename">Name:</label><br />
+          <input type="text" id="service" name="servicename" size="30" /><br />
+          <label for="phonenumber">PhoneNumber:</label><br />
+          <input type="text" id="number" name="phonenumber" size="30" /><br />
+          <label for="typeoffood">Type of Cuisine:</label>
+          <input type="text" id="type" name="typeoffood" size="30" /><br />
+          <label for="numberofmenu">Number of Menus:</label><br />
+          <input
+            type="text"
+            id="numbermenu"
+            name="numberofmenu"
+            size="30"
+          /><br />
+
+          <label for="area">Area covered by service:</label>
+          <input type="text" id="area" name="area" size="30" /><br />
+          <label for="servicemethod">Choose a service method:</label><br />
+          <input
+            for="servicemethod"
+            type="text"
+            id="servicemethod"
+            name="servicemethod"
+            size="30"
+          /><br />
+          <label for="frequency">Delivery/Pickup frequency:</label>
+          <input
+            type="text"
+            id="frequencyofdelivery"
+            name="frequency"
+            size="30"
+          /><br /><br />
+          <label for="deals">Deals:</label><br />
+          <input
+            type="text"
+            id="deals"
+            name="deals"
+            size="30"
+            class="inputfields"
+          />
+          <br /><br />
+          <label for="link">Link of social media page if any:</label>
+          <input type="text" id="link" name="link" size="50" />
+
+          <label for="avatar">Upload an Image:</label>
+          <input
+          type="file"
+          id="avatar"
+          name="avatar"
+          accept="image/png, image/jpeg"
+        />
+      </div>
+        <div class="menu1">
+          <h1>Menu 1:</h1>
+
+          <label for="price">Price:</label><br />
+          <input
+            type="text"
+            id="pricefield"
+            name="price"
+            size="30"
+            class="inputfields"
+          />
+          <br /><br />
+
+          <label for="mondayitem">Monday:</label><br />
+          <input
+            type="text"
+            id="mondayinput"
+            name="mondayitem"
+            size="70"
+            class="inputfields"
+          /><br /><br />
+
+          <label for="tuesdayitem">Tuesday:</label><br />
+          <input
+            type="text"
+            id="tuesdayinput"
+            name="tuesdayitem"
+            size="70"
+            class="inputfields"
+          /><br /><br />
+
+          <label for="wednesdayitem">Wednesday:</label><br />
+          <input
+            type="text"
+            id="wednesdayinput"
+            name="wednesdayitem"
+            size="70"
+            class="inputfields"
+          /><br /><br />
+
+          <label for="thursdayitem">Thursday:</label><br />
+          <input
+            type="text"
+            id="thursdayinput"
+            name="thursdayitem"
+            size="70"
+            class="inputfields"
+          /><br /><br />
+
+          <label for="fridayitem">Friday:</label><br />
+          <input
+            type="text"
+            id="fridayinput"
+            name="fridayitem"
+            size="70"
+            class="inputfields"
+          /><br /><br />
+
+          <label for="saturdayitem">Saturday:</label><br />
+          <input
+            type="text"
+            id="saturdayinput"
+            name="saturdayitem"
+            size="70"
+            class="inputfields"
+          /><br /><br />
+
+          <label for="sundayitem">Sunday:</label><br />
+          <input
+            type="text"
+            id="sundayinput"
+            name="sundayitem"
+            size="70"
+            class="inputfields"
+          /><br /><br />
+        </div>      
+      
+      <br /><br />
+      <div class="menu2">
+        <h1>Menu 2:</h1>
+        <label for="menu2price">Price:</label><br />
+        <input
+          type="text"
+          id="menu2pricefield"
+          name="menu2price"
+          size="30"
+          class="inputfields"
+        />
+        <br /><br />
+
+        <label for="menu2mondayitem">Monday:</label><br />
+        <input
+          type="text"
+          id="menu2mondayinput"
+          name="menu2mondayitem"
+          size="70"
+          class="inputfields"
+        /><br /><br />
+
+        <label for="menu2tuesdayitem">Tuesday:</label><br />
+        
+        <input
+          type="text"
+          id="menu2tuesdayinput"
+          name="menu2tuesdayitem"
+          size="70"
+          class="inputfields"
+        /><br /><br />
+
+        <label for="menu2wednesdayitem">Wednesday:</label><br />
+        <input
+          type="text"
+          id="menu2wednesdayinput"
+          name="menu2wednesdayitem"
+          size="70"
+          class="inputfields"
+        /><br /><br />
+
+        <label for="menu2thursdayitem">Thursday:</label><br />
+        <input
+          type="text"
+          id="menu2thursdayinput"
+          name="menu2thursdayitem"
+          size="70"
+          class="inputfields"
+        /><br /><br />
+
+        <label for="menu2fridayitem">Friday:</label><br />
+        <input
+          type="text"
+          id="menu2fridayinput"
+          name="menu2fridayitem"
+          size="70"
+          class="inputfields"
+        /><br /><br />
+
+        <label for="menu2saturdayitem">Saturday:</label><br />
+        <input
+          type="text"
+          id="menu2saturdayinput"
+          name="menu2saturdayitem"
+          size="70"
+          class="inputfields"
+        /><br /><br />
+
+        <label for="menu2sundayitem">Sunday:</label><br />
+        <input
+          type="text"
+          id="menu2sundayinput"
+          name="menu2sundayitem"
+          size="70"
+          class="inputfields"
+        /><br /><br />
+        </div>
+      <div class="menu3">
+        <h1>Menu 3:</h1>
+        <label for="menu3price">Price:</label><br />
+        <input
+          type="text"
+          id="menu3pricefield"
+          name="menu3price"
+          size="30"
+          class="inputfields"
+        />
+        <br /><br />
+
+        <label for="menu3mondayitem">Monday:</label><br />
+        <input
+          type="text"
+          id="menu3mondayinput"
+          name="menu3mondayitem"
+          size="70"
+          class="inputfields"
+        /><br /><br />
+
+        <label for="menu3tuesdayitem">Tuesday:</label><br />
+        <input
+          type="text"
+          id="menu3tuesdayinput"
+          name="menu3tuesdayitem"
+          size="70"
+          class="inputfields"
+        /><br /><br />
+
+        <label for="menu3wednesdayitem">Wednesday:</label><br />
+        <input
+          type="text"
+          id="menu3wednesdayinput"
+          name="menu3wednesdayitem"
+          size="70"
+          class="inputfields"
+        /><br /><br />
+
+        <label for="menu3thursdayitem">Thursday:</label><br />
+        <input
+          type="text"
+          id="menu3thursdayinput"
+          name="menu3thursdayitem"
+          size="70"
+          class="inputfields"
+        /><br /><br />
+
+        <label for="menu3fridayitem">Friday:</label><br />
+        <input
+          type="text"
+          id="menu3fridayinput"
+          name="menu3fridayitem"
+          size="70"
+          class="inputfields"
+        /><br /><br />
+
+        <label for="menu3saturdayitem">Saturday:</label><br />
+        <input
+          type="text"
+          id="menu3saturdayinput"
+          name="menu3saturdayitem"
+          size="70"
+          class="inputfields"
+        /><br /><br />
+
+        <label for="menu3sundayitem">Sunday:</label><br />
+        <input
+          type="text"
+          id="menu3sundayinput"
+          name="menu3sundayitem"
+          size="70"
+          class="inputfields"
+        /><br /><br />
+
+    </div>
+    <button type="submit" class="submitbutton" value="submit">
+      🤑Start!!!
+    </button>
+  </form>
+  </div>
+
+    <div style="margin-top: 0px"></div>
+  </body>
+</html>

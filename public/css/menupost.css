@@ -1,0 +1,121 @@
+body {
+  background-image: url('menupost.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  font-weight: bolder;
+}
+.topnav {
+  background-color: none;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  font-family: 'Ribeye';
+  -webkit-text-stroke-color: blueviolet;
+  -webkit-text-stroke-width: 0.2px;
+  margin-left: 100px;
+  float: left;
+  color: #ff00d6;
+
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: royalblue;
+}
+
+.menu {
+  display: flex;
+  position: relative;
+  width: 100%;
+  left: 0.5%;
+  border: none;
+  background-image: none;
+  margin-top: 30px;
+  padding-bottom: 25px;
+}
+
+.menuptag {
+  -webkit-text-stroke-color: blueviolet;
+  -webkit-text-stroke-width: 0.2px;
+  position: relative;
+  left: 30%;
+  font-size: 48px;
+}
+
+.entermenuheader {
+  -webkit-text-stroke-color: blueviolet;
+  -webkit-text-stroke-width: 0.2px;
+  display: flex;
+  flex-direction: row;
+  left: 40%;
+  color: white;
+  font-family: cursive;
+  font-weight: bolder;
+}
+
+input[type='text'] {
+  background: none;
+  border: none;
+  color: #ff00d6;
+  font-style: bold;
+  font-weight: bolder;
+  border-bottom: 2px solid black;
+  width: 90%;
+  padding: 3px;
+}
+.information {
+  color: black;
+  font-weight: bold;
+}
+.menuname {
+  -webkit-text-stroke-color: blueviolet;
+  -webkit-text-stroke-width: 0.2px;
+  color: black;
+  font-family: cursive;
+
+  font-weight: bolder;
+}
+
+.submitbutton {
+  background-color: blueviolet;
+  color: #fff;
+  border: 2px solid rgb(216, 2, 134);
+  border-radius: 0px;
+  padding: 18px 36px;
+
+  width: 100%;
+  display: inline-block;
+  font-family: 'Lucida Console', Monaco, monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #d80286;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.submitbutton:hover {
+  box-shadow: inset 1530px 0 0 0 #d80286;
+}
+
+.menuformat {
+  position: relative;
+  left: 30%;
+  font-size: 25px;
+  color: black;
+}
+
+.menuh1 {
+  margin-left: 230px;
+  -webkit-text-stroke-color: blueviolet;
+  -webkit-text-stroke-width: 0.5px;
+}

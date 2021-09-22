@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Post</title>
+    <link rel="stylesheet" href="/css/menupost.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Ribeye"
+    />
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/">Food🦛Hippo</a>
+      <a href="/about">About</a>
+      <a href="/menuoverview">Menus</a>
+      <a href="/showweeklymenus">Weekly Menus</a>
+      <a href="/searchweeklymenu">Search By Location</a>
+    </div>
+    <div class="entermenuheader">
+      <h1>Enter Info:</h1>
+      <h1 class="menuh1">Enter Menu:Item......serving....$Price</h1>
+    </div>
+    <form method="post" action="/menupost" enctype="multipart/form-data">
+      <div class="menu">
+        <div class="information">
+          <label for="servicename">Name:</label><br />
+          <input type="text" id="service" name="servicename" size="30" /><br />
+          <label for="phonenumber">PhoneNumber:</label><br />
+          <input type="text" id="number" name="phonenumber" size="30" /><br />
+          <label for="typeoffood">Type of Cuisine:</label><br />
+          <input type="text" id="type" name="typeoffood" size="30" /><br />
+          <label for="processingtime">Expected Processing Time:</label>
+          <input
+            type="text"
+            id="processingtime"
+            name="processingtime"
+            size="30"
+          /><br />
+
+          <label for="area">Area covered by service:</label>
+          <input type="text" id="area" name="area" size="30" /><br />
+
+          <label for="servicemethod">Service Method:</label>
+          <input
+            type="text"
+            id="servicemethod"
+            name="servicemethod"
+            size="30"
+          /><br />
+
+          <label for="frequency">Delivery/Pickup frequency:</label>
+          <input
+            type="text"
+            id="frequencyofdelivery"
+            name="frequency"
+            size="30"
+          /><br /><br />
+          <label for="avatar">Upload Main Picture:</label>
+          <input
+            type="file"
+            id="avatar"
+            name="avatar"
+            accept="image/png, image/jpeg, image/jfif, image/tiff, image/GIF"
+          />
+        </div>
+        <div class="appetizers">
+          <p class="menuname"></p>
+          <p class="menuname">Appetizers:</p>
+          <input
+            type="text"
+            name="appetizer1"
+            size="40"
+            id="line1"
+            class="menulines"
+          />
+          <br />
+          <br />
+          <input
+            type="text"
+            name="appetizer2"
+            size="40"
+            id="line2"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="appetizer3"
+            size="40"
+            id="line4"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="appetizer4"
+            size="40"
+            id="line5"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="appetizer5"
+            size="40"
+            id="line6"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="appetizer6"
+            size="40"
+            id="line7"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="appetizer7"
+            size="40"
+            id="line8"
+            class="menulines"
+          /><br /><br />
+        </div>
+        <div class="meat">
+          <p class="menuname">Meat/Fish Specialities:</p>
+          <input
+            type="text"
+            name="meat1"
+            size="40"
+            id="line9"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="meat2"
+            size="40"
+            id="line11"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="meat3"
+            size="40"
+            id="line12"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="meat4"
+            size="40"
+            id="line13"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="meat5"
+            size="40"
+            id="line14"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="meat6"
+            size="40"
+            id="line15"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="meat7"
+            size="40"
+            id="line16"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="meat8"
+            size="40"
+            id="line17"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="meat9"
+            size="40"
+            id="line18"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="meat10"
+            size="40"
+            id="line19"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="meat11"
+            size="40"
+            id="line20"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="meat12"
+            size="40"
+            id="line21"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="meat13"
+            size="40"
+            id="line22"
+            class="menulines"
+          /><br /><br />
+        </div>
+        <div class="dishes">
+          <p class="menuname">Dishes/Combos:</p>
+          <input
+            type="text"
+            name="dishes1"
+            size="40"
+            id="line23"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="dishes2"
+            size="40"
+            id="line24"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="dishes3"
+            size="40"
+            id="line25"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="dishes4"
+            size="40"
+            id="line26"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="dishes5"
+            size="40"
+            id="line22"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="dishes6"
+            size="40"
+            id="line22"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="dishes7"
+            size="40"
+            id="line22"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="dishes8"
+            size="40"
+            id="line22"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="dishes9"
+            size="40"
+            id="line22"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="dishes10"
+            size="40"
+            id="line22"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="dishes11"
+            size="40"
+            id="line22"
+            class="menulines"
+          /><br /><br />
+        </div>
+        <div class="desserts">
+          <p class="menuname">Drinks and desserts:</p>
+          <input
+            type="text"
+            name="desserts1"
+            size="40"
+            id="line23"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="desserts2"
+            size="40"
+            id="line24"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="desserts3"
+            size="40"
+            id="line25"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="desserts4"
+            size="40"
+            id="line26"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="desserts5"
+            size="40"
+            id="line22"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="desserts6"
+            size="40"
+            id="line22"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="desserts7"
+            size="40"
+            id="line22"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="desserts8"
+            size="40"
+            id="line22"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="desserts9"
+            size="40"
+            id="line22"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="desserts10"
+            size="40"
+            id="line22"
+            class="menulines"
+          /><br /><br />
+          <input
+            type="text"
+            name="desserts11"
+            size="40"
+            id="line22"
+            class="menulines"
+          /><br /><br />
+        </div>
+      </div>
+      <button type="submit" class="submitbutton" value="submit">
+        🤑Start!!!
+      </button>
+    </form>
+
+    <!--Helping in scrolling
+		<div style="margin-top:500px"></div>
+		<footer>
+			<p>Copyright &copy; 2018, My website </p>
+		</footer>
+    -->
+  </body>
+</html>

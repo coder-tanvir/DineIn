@@ -1,0 +1,57 @@
+doctype html 
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet' href='/css/showoneweekly.css')
+        title Detailed WeeklyMenu
+    body(style=`background-image:url(../uploads/${caterpostone.avatar})`)
+        .topnav
+            a.active(href='#home') Home
+            a(href='#news') Newss
+
+        .eggbox(style=`background-image:url(../uploads/${caterpostone.avatar})`)
+            p.businessname=`${caterpostone.servicename}`
+            p.area=`🏠Area:${caterpostone.area}`
+            p.phonenumber=`☎️ Tel: ${caterpostone.phonenumber}`
+            p.processingtime=`⌛ Processing Time: 1 day`
+            p.method=`🚚 Del/Pick:${caterpostone.servicemethod}`
+            p.deals=`🥤Deals:${caterpostone.deals}`
+
+        .plate_container
+            .plate
+                span.inner_plate
+                    h1.menu1=`🍽️ Menu 1:${caterpostone.price}`
+                        p.small=`Mon:${caterpostone.mondaytitem}`
+                        p.small=`Tue:${caterpostone.tuesdayitem}`
+                        p.small=`Wed:${caterpostone.wednesdayitem}`
+                        p.small=`Thur:${caterpostone.thursdayitem}`
+                        p.small=`Fri:${caterpostone.fridayitem}`
+                        p.small=`Sat:${caterpostone.saturdayitem}`
+                        p.small=`Sun:${caterpostone.sundayitem}`
+
+            .plate
+                span.inner_plate
+                    h1.menu1=`🍽️ Menu 2:${caterpostone.men2uprice}`
+                        p.small=`Mon:${caterpostone.menu2mondaytitem}`
+                        p.small=`Tue:${caterpostone.menu2tuesdayitem}`
+                        p.small=`Wed:${caterpostone.menu2wednesdayitem}`
+                        p.small=`Thur:${caterpostone.menu2thursdayitem}`
+                        p.small=`Fri:${caterpostone.menu2fridayitem}`
+                        p.small=`Sat:${caterpostone.menu2saturdayitem}`
+                        p.small=`Sun:${caterpostone.menu2sundayitem}`
+
+            .plate
+                span.inner_plate
+                    h1.menu1=`🍽️ Menu 3:${caterpostone.menu3price}`
+                        p.small=`Mon:${caterpostone.menu3mondaytitem}`
+                        p.small=`Tue:${caterpostone.menu3tuesdayitem}`
+                        p.small=`Wed:${caterpostone.menu3wednesdayitem}`
+                        p.small=`Thur:${caterpostone.menu3thursdayitem}`
+                        p.small=`Fri:${caterpostone.menu3fridayitem}`
+                        p.small=`Sat:${caterpostone.menu3saturdayitem}`
+                        p.small=`Sun:${caterpostone.menu3sundayitem}`
+        
+
+    

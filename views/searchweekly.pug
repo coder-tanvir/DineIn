@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/css/searchweeklymenu.css")
+        link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ribeye")
+        title Search Weekly
+    body
+        .topnav
+            a(href="/") Food🦛Hippo
+            a(href='/showweeklymenus') WeeklyMenus
+            a(href='/menuoverview') Menus
+            a(href='/about') About
+        form(method="POST" action="/searchweeklymenu")
+            input.bar(type="text" name="searchbar" placeholder="Search by Area Name:Burnaby,vancouver")
+            button.searchbutton(type="submit") 
+                i.fa.fa-search.fa-xs
+        .box_container
+            each menu in menus
+                .box 
+                    img.principalimage(src=`../uploads/${menu.avatar}`)
+                    p.nametag=`${menu.servicename}`
+                    p.typetag=`🍽️: ${menu.typeoffood}`
+                    p.pricetag=`💲: ${menu.price}`    
+                    p.areatag=`📍: ${menu.area}`                    
+                    a.mediatag(href=`${menu.link}`) Visit Webpage
+                    a.button.submitbutton(href=`/caterpost/${menu.servicename}`)  🥡🥡🥡
+        .margin
+                
+
+
+            
+
+
+
+
+            
+        
+        
+
+
+
+            

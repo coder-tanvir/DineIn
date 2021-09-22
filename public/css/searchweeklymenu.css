@@ -1,0 +1,147 @@
+.bar {
+  height: 35px;
+  width: 30%;
+  margin-left: 30%;
+  margin-top: 20px;
+  color: blue;
+  font-weight: bold;
+  border: 2px solid #ff00d6;
+}
+.fa.fa-search.fa-xs {
+  background-color: #ff00d6;
+}
+.searchbutton {
+  height: 39px;
+  width: 60px;
+  color: white;
+  border: 3px solid #ff00d6;
+  background-color: #ff00d6;
+}
+body {
+  position: relative;
+  background-image: url('green.jpg');
+  background-size: cover;
+}
+.topnav {
+  background-color: none;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  font-family: 'Ribeye';
+  float: left;
+  color: #ff00d6;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
+  margin-left: 170px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: royalblue;
+}
+
+/* Add a color to the active/current link */
+
+.box {
+  position: relative;
+  background-image: linear-gradient(
+    to right top,
+    #1bb13b,
+    #008d48,
+    #00bb50,
+    #12eb50
+  );
+  border: 2px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 50px;
+  height: auto;
+  width: 15%;
+}
+.box:hover {
+  border: solid chartreuse 2px;
+  background-image: linear-gradient(
+    to right top,
+    #5bcb35,
+    #70d045,
+    #83d654,
+    #93db63,
+    #a3e072,
+    #a8e476,
+    #aee879,
+    #b3ec7d,
+    #b0f076,
+    #aef46f,
+    #aaf767,
+    #a7fb5f
+  );
+}
+
+.principalimage {
+  object-fit: cover;
+  overflow: hidden;
+  height: 170px;
+  width: 100%;
+}
+.margin {
+  margin-top: 100px;
+}
+.nametag {
+  font-family: cursive;
+  font-style: normal;
+  font-variant: normal;
+  color: chartreuse;
+  text-shadow: 1px 1px white;
+  margin-top: 2px;
+  font-size: 20px;
+  position: relative;
+  margin-left: 10%;
+}
+
+.submitbutton {
+  position: relative;
+  margin-bottom: 0px;
+
+  margin-left: 20%;
+  background-color: red;
+  color: #fff;
+  border: 2px solid rgb(216, 2, 134);
+  border-radius: 0px;
+  padding: 18px 36px;
+  display: inline-block;
+  font-family: 'Lucida Console', Monaco, monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #d80286;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.submitbutton:hover {
+  box-shadow: inset 400px 0 0 0 #98fb98;
+}
+
+p {
+  color: royalblue;
+}
+
+.box_container {
+  display: flex;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.footerclass {
+  margin-bottom: 10px;
+}
+
+.mediatag:hover {
+  color: chartreuse;
+}

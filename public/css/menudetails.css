@@ -1,0 +1,188 @@
+.topnav {
+  background-color: none;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: #7c9be3;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #9932cc;
+  color: white;
+}
+
+.flex_container {
+  display: inline-flex;
+  width: 95%;
+  height: auto;
+  margin-top: 70px;
+  justify-content: space-evenly;
+}
+
+.eggbox {
+  background-size: auto 100%;
+  background-position: center;
+  border: 3px dotted black;
+  display: block;
+  width: 326px;
+  height: 380px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  opacity: 1.5;
+  margin-top: 30px;
+  margin-left: 38%;
+  text-align: center;
+  font-weight: 400;
+}
+
+.eggbox:hover {
+  border: 5px solid chartreuse;
+  font-weight: 800;
+  text-shadow: black;
+}
+.businessname {
+  margin-top: 22%;
+  font-size: 29px;
+  justify-content: center;
+  color: beige;
+  font-weight: Bold;
+  text-shadow: 3px black;
+}
+
+.area {
+  color: beige;
+  font-size: 18px;
+}
+
+.phonenumber {
+  color: beige;
+  font-size: 18px;
+}
+.method {
+  color: beige;
+  font-size: 18px;
+}
+.processingtime {
+  color: beige;
+  font-size: 18px;
+}
+.deals {
+  color: beige;
+  font-size: 18px;
+}
+
+.appetizers {
+  width: 20%;
+  height: 450px;
+  border: 0.2px;
+
+  transform: 0.5s ease-in-out;
+}
+
+.appetizers:hover {
+  transform: translateY(20px);
+  zoom: 150%;
+  font-weight: 800;
+  text-shadow: black;
+}
+
+.appetizers p:hover {
+  opacity: 1;
+  font-style: italic;
+  color: blue;
+  zoom: 130%;
+}
+
+.meats {
+  width: 20%;
+  height: 670px;
+  border: none;
+}
+
+.meats:hover {
+  transform: translateY(20px);
+  zoom: 150%;
+
+  font-weight: 800;
+  text-shadow: black;
+}
+
+.meats p:hover {
+  opacity: 1;
+  font-style: italic;
+  color: blue;
+  zoom: 130%;
+}
+
+.dishes {
+  width: 20%;
+  height: 590px;
+  border: none;
+}
+.dishes:hover {
+  transform: translateY(20px);
+  zoom: 150%;
+
+  font-weight: 800;
+  text-shadow: black;
+}
+
+.dishes p:hover {
+  opacity: 1;
+  font-style: italic;
+  color: blue;
+  zoom: 130%;
+}
+
+.desserts {
+  width: 20%;
+  height: 650px;
+  border: none;
+}
+.desserts:hover {
+  transform: translateY(20px);
+  zoom: 150%;
+
+  font-weight: 800;
+  text-shadow: black;
+}
+
+.desserts p:hover {
+  opacity: 1;
+  font-style: italic;
+  color: blue;
+  zoom: 130%;
+}
+
+p {
+  font-size: 21px;
+  color: white;
+  font-family: fantasy;
+  font-style: oblique;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 1.3px;
+}
+
+h1 {
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 1.3px;
+  font-size: 35px;
+  color: orangered;
+  border-radius: 10px black;
+  font-style: italic;
+  text-shadow: 10px black;
+  border-bottom: dashed orangered 3px;
+}
