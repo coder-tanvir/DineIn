@@ -11,3 +11,7 @@ posting menus by html form
 Users can edit their information such as password, address, contact number.
 
 Businesses can change their menu and price.
+
+For every routes use this email and password:
+mango@123
+mango123
