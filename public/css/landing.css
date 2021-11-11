@@ -50,11 +50,17 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
+  background: rgba(45, 88, 35, 0.7);
   width: 40%;
   height: 700px;
 }
-
+.right:before {
+  content: '';
+  position: absolute;
+  height: 700px;
+  width: 31.6%;
+  background: rgba(255, 0, 255, 0.2);
+}
 .image1 {
   background-image: url('steak.jpg');
   background-size: cover;
@@ -132,13 +138,10 @@ body {
   margin-left: 35%;
   background-color: #ff00d6;
 }
-.signin:hover {
-  border: solid 1px blue;
-}
 
 input[type='text'] {
-  border: 0.7px solid blue;
   height: 22px;
+  width: 97%;
 }
 
 .loginbutton {
