@@ -24,21 +24,22 @@
         <p class="weeklymenuheader">Enter Information: </p>
         <form method="post" action="/caterpost" enctype="multipart/form-data">
           <label for="servicename">Name:</label><br />
-          <input type="text" id="service" name="servicename" size="30" /><br />
+          <input type="text" id="service" name="servicename" size="30" / placeholder="Required"><br />
           <label for="phonenumber">PhoneNumber:</label><br />
-          <input type="text" id="number" name="phonenumber" size="30" /><br />
+          <input type="text" id="number" name="phonenumber" size="30" /placeholder="Required"><br />
           <label for="typeoffood">Type of Cuisine:</label>
-          <input type="text" id="type" name="typeoffood" size="30" /><br />
+          <input type="text" id="type" name="typeoffood" size="30" placeholder="Required"/><br />
           <label for="numberofmenu">Number of Menus:</label><br />
           <input
             type="text"
             id="numbermenu"
             name="numberofmenu"
             size="30"
+            placeholder="Required"
           /><br />
 
           <label for="area">Area covered by service:</label>
-          <input type="text" id="area" name="area" size="30" /><br />
+          <input type="text" id="area" name="area" size="30" placeholder="Required"/><br />
           <label for="servicemethod">Choose a service method:</label><br />
           <input
             for="servicemethod"
@@ -46,6 +47,7 @@
             id="servicemethod"
             name="servicemethod"
             size="30"
+            placeholder="Required"
           /><br />
           <label for="frequency">Delivery/Pickup frequency:</label>
           <input
@@ -53,7 +55,7 @@
             id="frequencyofdelivery"
             name="frequency"
             size="30"
-          /><br /><br />
+           placeholder="Required"/><br /><br />
           <label for="deals">Deals:</label><br />
           <input
             type="text"
