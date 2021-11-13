@@ -1,4 +1,6 @@
 //Packages
+const dotenv = require('dotenv');
+dotenv.config({ path: './config.env' });
 const mongoose = require('mongoose');
 const express = require('express');
 const http = require('http');
@@ -62,10 +64,9 @@ const upload = multer({
 
 //////////////////////////////////////////////////////////////
 ////Database Connection
-const db =
-  'mongodb+srv://foodytanvir:lililolou@cluster0.ijco0.mongodb.net/FoodApplication?retryWrites=true&w=majority';
+
 mongoose
-  .connect(db, {
+  .connect(process.env.DATABASE_CONNECTION, {
     userNewUrlParser: true,
     userCreateIndex: true,
     userFindAndModify: false,
