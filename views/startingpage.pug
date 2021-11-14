@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/startingpage.css")
+        title LandingPage
+    body
+        .firstbox
+            .topnav
+                a(href='/about') About
+            .slogan
+                h1="Healthy Food Everyday"
+            .signin
+                form(action="/login", method="POST")
+                    p="Email"
+                    input(type="text" )
+                    p="Password"
+                    input(type="text" )
+                    button.loginbutton(type="submit")
+
+

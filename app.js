@@ -62,6 +62,10 @@ const upload = multer({
   },
 });
 
+app.get('/starttheapp', (req, res) => {
+  res.render('startingpage');
+});
+
 //////////////////////////////////////////////////////////////
 ////Database Connection
 
