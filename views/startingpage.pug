@@ -10,14 +10,18 @@ html(lang="en")
         .firstbox
             .topnav
                 a(href='/about') About
-            .slogan
-                h1="Healthy Food Everyday"
+
             .signin
                 form(action="/login", method="POST")
-                    p="Email"
-                    input(type="text" )
-                    p="Password"
-                    input(type="text" )
-                    button.loginbutton(type="submit")
+                    h1="Login"
+                        span 
+                    input(type="text" required)
+                    label="Email"
+                    input(type="text" required)
+                    label="Password"
+                    button.loginbutton(type="submit") Login
+                    p='Dont have an account?' 
+                        a(href='/registration')   Register 
+                    
 
 

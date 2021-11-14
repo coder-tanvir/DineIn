@@ -28,40 +28,59 @@ body {
 }
 .firstbox {
   width: 100%;
-  height: 700px;
+  height: 600px;
   background-color: burlywood;
   background-image: url('startingpage2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.slogan h1 {
-  margin-left: 5%;
-  margin-top: 5%;
-  color: white;
+  filter: brightness(130%);
 }
 
 .signin {
   width: 20%;
+  height: 250px;
   color: whitesmoke;
-  font-size: medium;
+  font-size: large;
   font-weight: bold;
-  border: 2px solid blue;
   border-radius: 15px 50px;
+  margin-left: 10px;
+  margin-top: 10%;
 }
 
 .signin input {
   color: white;
-  width: 100%;
+  width: 90%;
+  font-size: 14px;
   border-top: none;
   border-left: none;
   border-right: none;
+  border-bottom: 3px solid white;
+  background-color: transparent;
+}
 
-  background: none;
+.signin input:focus {
+  outline: none;
+  border-bottom: 3px solid rebeccapurple;
+}
+
+.signin h1 {
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.2px;
+  margin-left: 24%;
+  margin-right: 44%;
+  border-bottom: 3px solid white;
 }
 
 .loginbutton {
-  width: 100%;
-  height: 10px;
+  width: 92%;
+  height: 30px;
+  margin-top: 13px;
+  border: 3px solid white;
+  color: white;
+  background-color: transparent;
+}
+
+.loginbutton:hover {
+  border: 3px solid rebeccapurple;
 }
