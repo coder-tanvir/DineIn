@@ -31,11 +31,10 @@ body {
   width: 100%;
   height: 600px;
   background-color: burlywood;
-  background-image: url('startingpage2.jpg');
+  background-image: url('startingpage27.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: brightness(150%);
 }
 
 .signin {
@@ -44,19 +43,21 @@ body {
   color: whitesmoke;
   font-size: large;
   font-weight: bold;
-  border-radius: 15px 50px;
+  background-color: transparent;
   margin-left: 10px;
   margin-top: 10%;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px #333;
 }
 
 .signin input {
   color: white;
-  width: 90%;
+  width: 98%;
   font-size: 14px;
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid rebeccapurple;
   background-color: transparent;
 }
 
@@ -69,18 +70,18 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   -webkit-text-stroke-color: black;
   -webkit-text-stroke-width: 0.2px;
-  margin-left: 24%;
-  margin-right: 44%;
-  border-bottom: 3px solid white;
+  margin-left: 28%;
+  margin-right: 38%;
+  border-bottom: 3px solid rebeccapurple;
 }
 
 .loginbutton {
-  width: 92%;
+  width: 100%;
   height: 30px;
   margin-top: 13px;
-  border: 3px solid white;
+  border: 3px solid rebeccapurple;
   color: white;
-  background-color: transparent;
+  background-color: rebeccapurple;
 }
 
 .loginbutton:hover {
@@ -125,7 +126,7 @@ body {
   margin-left: 10px;
   width: 57%;
   height: 100%;
-
+  border-left: 5px solid rebeccapurple;
   display: flex;
 }
 
@@ -163,4 +164,10 @@ body {
 .leftblock2 a {
   color: white;
   text-decoration: none;
+}
+
+/* ************************************************** */
+.thirdbox {
+  width: 100%;
+  height: 500px;
 }
