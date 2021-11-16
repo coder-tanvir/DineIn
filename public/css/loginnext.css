@@ -1,0 +1,49 @@
+body {
+  background-image: url('loginnext.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  background-image: url('landingpagelogo.png');
+  height: 250px;
+  width: 400px;
+  margin-left: 37%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blocks {
+  width: 30%;
+  height: 40px;
+  display: flex;
+  margin-left: 10%;
+  margin-top: 10px;
+  color: rebeccapurple;
+  background-color: white;
+  box-shadow: 0 0 10px rebeccapurple;
+}
+
+h1 {
+  margin-left: 35%;
+  color: rebeccapurple;
+}
+
+.inside {
+  position: center;
+  margin-left: 0;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.arrowbutton i {
+  position: center;
+}
+
+.div1 {
+  width: 90%;
+}
+
+.div2 {
+  float: right;
+}

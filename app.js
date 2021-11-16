@@ -30,12 +30,16 @@ app.use('/uploads', express.static('uploads'));
 app.use(
   session({
     secret: 'verygoodsecret',
-    resave: false,
-    saveUninitialized: false,
+    resave: true,
+    saveUninitialized: true,
   })
 );
 app.use(flash());
 
+app.use((req, res, next) => {
+  res.locals.error = req.flash('error');
+  next();
+});
 app.use(passport.initialize());
 app.use(passport.session());
 ///Templating Engine
@@ -62,10 +66,6 @@ const upload = multer({
   },
 });
 
-app.get('/starttheapp', (req, res) => {
-  res.render('startingpage');
-});
-
 //////////////////////////////////////////////////////////////
 ////Database Connection
 
@@ -83,7 +83,7 @@ mongoose
 //Server requests and responses
 //Landing page and Login
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/landing.html');
+  res.render('startingpage');
 });
 
 //////
@@ -161,7 +161,8 @@ passport.use(
       })
       .then((user) => {
         if (!user) {
-          return done(null, false, { message: 'That email is not registered' });
+          res.locals.error = 'Email not found';
+          return done(null, false, { message: 'Email not found' });
         }
 
         // Match password
@@ -193,8 +194,8 @@ passport.deserializeUser(function (id, done) {
 app.post(
   '/login',
   passport.authenticate('local', {
-    successRedirect: '/menuoverview',
-    failureRedirect: '/about',
+    successRedirect: '/loginnext',
+    failureRedirect: '/',
     session: true,
   })
 );
@@ -205,6 +206,11 @@ const ensureAuthenticated = (req, res, next) => {
   }
   res.redirect('/searchweeklymenu');
 };
+
+app.get('/loginnext', ensureAuthenticated, async (req, res) => {
+  const user = await users.findById(req.user.id);
+  res.render('loginnext');
+});
 
 app.get('/updateuserinfo', ensureAuthenticated, async (req, res) => {
   const user = await users.findById(req.user.id);
