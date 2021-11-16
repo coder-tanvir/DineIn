@@ -8,16 +8,13 @@ html(lang="en")
         title LandingPage
     body
         .firstbox
-            .topnav
-                a(href='/about') About
-
+            .logo
             .signin
                 form(action="/login", method="POST")
                     h1="Login"
-                        span 
-                    input(type="text" required)
+                    input(type="text" name="email" required)
                     label="Email"
-                    input(type="text" required)
+                    input(type="text" name="password" required)
                     label="Password"
                     button.loginbutton(type="submit") Login
                     p='Dont have an account?' 
@@ -42,14 +39,22 @@ html(lang="en")
                         a(href='/registration') Register
 
         .thirdbox
-                .thirboxleft
+                .thirdleft
                     .rectangle1
                     .rectangle2
                     .rectangle3 
                     .rectangle4
-                .thirdboxright
-                    h1='All that Tastes are Appreciated'
-                    p=''
+                .thirdright
+                    h1='All that tastes good, are Appreciated'
+                    p=`Canada is a multi-cultural hub. we aim to provide all sorts of food. Choose from 100's of national and international food types. NEVER GET BORED. Taste different food everyday.`
+                    button.registerbutton.second
+                        a(href='/registration') Register
+                        
+
+                
+                    
+                        
+                        
 
 
                     

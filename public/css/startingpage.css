@@ -2,39 +2,33 @@ html,
 body {
   margin: 0;
   padding: 0;
+  border: 0;
+  outline: 0;
   height: 100%;
   width: 100%;
   background-color: rebeccapurple;
 }
-.topnav {
-  background-color: none;
-  overflow: hidden;
-}
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  font-family: 'Ribeye';
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 24px;
-  margin-left: 170px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  color: royalblue;
+.logo {
+  height: 250px;
+  width: 400px;
+  background-image: url('landingpagelogo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  margin-left: 34%;
 }
 .firstbox {
-  width: 100%;
+  margin-top: 0;
+  width: 101.5%;
   height: 600px;
   background-color: burlywood;
   background-image: url('startingpage27.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  top: -10px;
+  position: relative;
 }
 
 .signin {
@@ -44,10 +38,10 @@ body {
   font-size: large;
   font-weight: bold;
   background-color: transparent;
-  margin-left: 10px;
-  margin-top: 10%;
-  background: rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 10px #333;
+  margin-left: 37%;
+  margin-top: 2%;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rebeccapurple;
 }
 
 .signin input {
@@ -85,7 +79,7 @@ body {
 }
 
 .loginbutton:hover {
-  border: 3px solid rebeccapurple;
+  border: 3px solid salmon;
 }
 
 /* ************************************************** */
@@ -95,6 +89,9 @@ body {
   background-color: white;
   display: flex;
   padding: 10px;
+  top: -10px;
+  position: relative;
+  border-bottom: 2px solid rebeccapurple;
 }
 
 .left {
@@ -151,9 +148,13 @@ body {
 .registerbutton {
   height: 35px;
   width: 90px;
-  border-radius: 10%;
+  border-radius: 15px;
   background-color: rebeccapurple;
   color: white;
+}
+
+.registerbutton:hover {
+  border: 5px solid salmon;
 }
 
 .rightblock2 a {
@@ -168,6 +169,81 @@ body {
 
 /* ************************************************** */
 .thirdbox {
+  background-color: rebeccapurple;
+  top: -10px;
+  position: relative;
   width: 100%;
-  height: 500px;
+  height: 400px;
+  display: flex;
+  color: white;
+}
+
+.thirdleft {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  filter: brightness(80%);
+}
+.rectangle1 {
+  background-image: url('highmain2.jpg');
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  flex: 1 0 48%;
+  width: 50%;
+  height: 50%;
+}
+.rectangle2 {
+  background-image: url('twoboxes.jpg');
+  background-size: cover;
+  background-position: center;
+  flex: 1 0 48%;
+  width: 50%;
+  height: 50%;
+}
+.rectangle3 {
+  background-image: url('persian.jpg');
+  background-size: cover;
+  background-position: center;
+  flex: 1 0 48%;
+  width: 50%;
+  height: 50%;
+}
+.rectangle4 {
+  background-image: url('chinese.jpg');
+  background-size: cover;
+  background-position: center;
+  flex: 1 0 48%;
+  width: 50%;
+  height: 50%;
+}
+
+.thirdright {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 40%;
+}
+
+.thirright p {
+  text-align: center;
+  height: 100%;
+  font-size: 15px;
+}
+
+.registerbutton.second {
+  height: 35px;
+  width: 90px;
+  margin-left: 40%;
+  border-radius: 15px;
+  background-color: white;
+  color: white;
+}
+
+.registerbutton.second:hover {
+  border: 5px solid salmon;
+}
+
+.thirdbox a {
+  text-decoration: none;
 }
