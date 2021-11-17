@@ -5,11 +5,14 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet" href="/css/updateweekly.css")
+        link(rel="shortcut icon" type="image/png" href="/css/landingpagelogo.png")
+
         title Update WeeklyMenu
     body
         .topnav
-            a(href='/') Home
-            a(href='/showweeklymenus') WeeklyMenus
+            a(href='/') DineIn
+            a(href='/searchweeklymenu') WeeklyMenus By Location
+            a(href='logout') Logout
         h1.nameontop='PLEASE EDIT YOUR WEEKLY MENU'
         h1.nameontop=`${updatepost.servicename}`
         
