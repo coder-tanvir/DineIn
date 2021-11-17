@@ -8,10 +8,10 @@ html(lang="en")
         title Search Menu By Location
     body 
         .topnav
-            a(href='/about') About FoodHippO
-            a(href='/showweeklymenus') WeeklyMenus🍱
-            a(href='/searchweeklymenu') Search By Location
-            a(href="/") Home
+            a(href='/about') About DineIn
+            a(href='/searchweeklymenu') Search Weekly Menu
+            a(href="/") DineIn
+            a(href='/logout') Logout
         form(method="POST" action="/searchmenu")
             input.bar(type="text" name="searchbar" placeholder="Search by Area Name:Burnaby,vancouver")
             button.searchbutton(type="submit") Go!

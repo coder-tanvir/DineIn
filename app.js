@@ -191,22 +191,25 @@ passport.deserializeUser(function (id, done) {
 ////////////////////////////////////////////////////////////////////////
 //////Login
 
-app.post(
-  '/login',
+app.post('/login', (req, res, next) =>
   passport.authenticate('local', {
     successRedirect: '/loginnext',
     failureRedirect: '/',
     session: true,
-  })
+  })(req, res, next)
 );
 
 const ensureAuthenticated = (req, res, next) => {
   if (req.isAuthenticated()) {
     return next();
   }
-  res.redirect('/searchweeklymenu');
+  res.redirect('/');
 };
 
+app.get('/logout', (req, res) => {
+  req.logout();
+  res.redirect('/');
+});
 app.get('/loginnext', ensureAuthenticated, async (req, res) => {
   const user = await users.findById(req.user.id);
   res.render('loginnext');

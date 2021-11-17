@@ -1,8 +1,8 @@
 body {
-  background-image: url("hearthealthy.jpg");
+  background-image: url('hearthealthy.jpg');
   background-position: center;
   background-size: cover;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
 }
 
 .topnav {
