@@ -645,6 +645,39 @@ app.post('/searchweeklymenu', ensureAuthenticated, async (req, res) => {
   });
 });
 
+app.get('/searchmenu', ensureAuthenticated, async (req, res) => {
+  const menus = await menupost.find();
+  res.render('searchmenu.pug', {
+    menus,
+  });
+});
+
+app.post('/searchmenu', ensureAuthenticated, async (req, res) => {
+  const searchterm = req.body.searchbar;
+  console.log(searchterm);
+  const input = searchterm;
+  const inputlower = input.toLowerCase();
+  const inputupper = input.toUpperCase();
+  const firstchar = input.charAt(0);
+  const lastpart = input.slice(1);
+  const firstupper = firstchar.toUpperCase();
+  const finalresult = firstupper + lastpart;
+  console.log(finalresult);
+
+  const menus = await menupost.find({
+    $or: [
+      { area: { $regex: input } },
+      { area: { $regex: inputlower } },
+      { area: { $regex: inputupper } },
+      { area: { $regex: finalresult } },
+    ],
+  });
+
+  res.render('searchmenu', {
+    menus,
+  });
+});
+
 ////About page
 //////
 app.get('/about', (req, res) => {
