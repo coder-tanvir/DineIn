@@ -10,14 +10,14 @@ html(lang="en")
         title Search Weekly
     body
         .topnav
-            a(href="/") Food🦛Hippo
-            a(href='/showweeklymenus') WeeklyMenus
+            a(href="/") DineIn
             a(href='/menuoverview') Menus
             a(href='/about') About
+            
         form(method="POST" action="/searchweeklymenu")
             input.bar(type="text" name="searchbar" placeholder="Search by Area Name:Burnaby,vancouver")
-            button.searchbutton(type="submit") 
-                i.fa.fa-search.fa-xs
+            button.searchbutton(type="submit") Go!
+                
         .box_container
             each menu in menus
                 .box 
