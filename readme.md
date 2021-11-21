@@ -1,4 +1,4 @@
-# FooDHiPPO
+# DineIn
 
 Technologies: node js, express, Pug, MongoDb, mongoose, Passport
 
