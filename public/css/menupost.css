@@ -17,7 +17,7 @@ body {
   -webkit-text-stroke-width: 0.2px;
   margin-left: 100px;
   float: left;
-  color: #ff00d6;
+  color: blueviolet;
 
   text-align: center;
   padding: 14px 16px;
@@ -36,9 +36,11 @@ body {
   position: relative;
   width: 100%;
   left: 0.5%;
+  font-size: medium;
+  font-weight: bolder;
   border: none;
   background-image: none;
-  margin-top: 30px;
+  margin-top: 50px;
   padding-bottom: 25px;
 }
 
@@ -64,12 +66,17 @@ body {
 input[type='text'] {
   background: none;
   border: none;
-  color: #ff00d6;
+  color: blueviolet;
   font-style: bold;
   font-weight: bolder;
   border-bottom: 2px solid black;
   width: 90%;
   padding: 3px;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid blueviolet;
 }
 .information {
   color: black;

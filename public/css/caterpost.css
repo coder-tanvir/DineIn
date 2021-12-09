@@ -34,42 +34,41 @@ body {
 }
 .menu2 {
   font-weight: bolder;
-
   width: 20%;
   border: none;
   margin-top: 5px;
   padding-bottom: 25px;
-  color: black;
+  color: blueviolet;
 }
 .menu1 {
   font-weight: bolder;
-
   width: 20%;
   color: white;
   border: none;
   height: auto;
-  color: black;
+  color: blueviolet;
 }
 .menu3 {
   font-weight: bolder;
-
   width: 20%;
   height: auto;
-  color: black;
+  color: blueviolet;
 }
 
 input[type='text'] {
   background: none;
   border: none;
-  color: #ff00d6;
+  color: blueviolet;
   font-style: bold;
   font-weight: bolder;
-  border-bottom: 2px solid purple;
+  border-bottom: 2px solid blueviolet;
   width: 90%;
 
   padding: 3px;
 }
-
+input:focus {
+  outline: none;
+}
 .submitbutton {
   background-color: blueviolet;
   color: #fff;
@@ -114,7 +113,7 @@ input[type='text'] {
   -webkit-text-stroke-width: 1px;
   margin-left: 120px;
   float: left;
-  color: #ff00d6;
+  color: blueviolet;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;

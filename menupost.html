@@ -11,10 +11,10 @@
       href="https://fonts.googleapis.com/css?family=Ribeye"
     />
     <link
-    rel="shortcut icon"
-    type="image/png"
-    href="/css/landingpagelogo.png"
-  />
+      rel="shortcut icon"
+      type="image/png"
+      href="/css/landingpagelogo.png"
+    />
   </head>
   <body>
     <div class="topnav">
@@ -24,29 +24,56 @@
       <a href="/searchweeklymenu">Search By Location</a>
       <a href="/logout">Logout</a>
     </div>
-    <div class="entermenuheader">
-      <h1>Enter Info:</h1>
-      <h1 class="menuh1">Enter Menu:Item......serving....$Price</h1>
-    </div>
+
     <form method="post" action="/menupost" enctype="multipart/form-data">
       <div class="menu">
         <div class="information">
-          <label for="servicename">Name:</label><br />
-          <input type="text" id="service" name="servicename" size="30" /><br />
+          <label for="servicename">Catering Name:</label><br />
+          <input
+            type="text"
+            id="service"
+            name="servicename"
+            size="30"
+            placeholder="Required"
+            required
+          /><br />
           <label for="phonenumber">PhoneNumber:</label><br />
-          <input type="text" id="number" name="phonenumber" size="30" /><br />
+          <input
+            type="text"
+            id="number"
+            name="phonenumber"
+            size="30"
+            placeholder="Required"
+            required
+          /><br />
           <label for="typeoffood">Type of Cuisine:</label><br />
-          <input type="text" id="type" name="typeoffood" size="30" /><br />
+          <input
+            type="text"
+            id="type"
+            name="typeoffood"
+            size="30"
+            placeholder="Required"
+            required
+          /><br />
           <label for="processingtime">Expected Processing Time:</label>
           <input
             type="text"
             id="processingtime"
             name="processingtime"
             size="30"
+            placeholder="Required"
+            required
           /><br />
 
           <label for="area">Area covered by service:</label>
-          <input type="text" id="area" name="area" size="30" /><br />
+          <input
+            type="text"
+            id="area"
+            name="area"
+            size="30"
+            placeholder="Required"
+            required
+          /><br />
 
           <label for="servicemethod">Service Method:</label>
           <input
@@ -54,6 +81,8 @@
             id="servicemethod"
             name="servicemethod"
             size="30"
+            placeholder="Required"
+            required
           /><br />
 
           <label for="frequency">Delivery/Pickup frequency:</label>
@@ -62,6 +91,8 @@
             id="frequencyofdelivery"
             name="frequency"
             size="30"
+            placeholder="Required"
+            required
           /><br /><br />
           <label for="avatar">Upload Main Picture:</label>
           <input
@@ -69,6 +100,7 @@
             id="avatar"
             name="avatar"
             accept="image/png, image/jpeg, image/jfif, image/tiff, image/GIF"
+            required
           />
         </div>
         <div class="appetizers">
@@ -80,6 +112,7 @@
             size="40"
             id="line1"
             class="menulines"
+            placeholder="Mozzarella Sticks----------$10"
           />
           <br />
           <br />
@@ -203,20 +236,6 @@
             name="meat11"
             size="40"
             id="line20"
-            class="menulines"
-          /><br /><br />
-          <input
-            type="text"
-            name="meat12"
-            size="40"
-            id="line21"
-            class="menulines"
-          /><br /><br />
-          <input
-            type="text"
-            name="meat13"
-            size="40"
-            id="line22"
             class="menulines"
           /><br /><br />
         </div>
