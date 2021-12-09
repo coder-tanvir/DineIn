@@ -135,7 +135,7 @@ userschema.methods.correctpassword = async function (
 const users = mongoose.model('users', userschema);
 
 app.get('/registration', (req, res) => {
-  res.sendFile(__dirname + '/registration.html');
+  res.sendFile(__dirname + '/views/registration.html');
 });
 
 app.post('/registration', async (req, res) => {
@@ -218,7 +218,7 @@ app.get('/loginnext', ensureAuthenticated, async (req, res) => {
 app.get('/updateuserinfo', ensureAuthenticated, async (req, res) => {
   const user = await users.findById(req.user.id);
   console.log('Get request', user);
-  res.sendFile(__dirname + '/updateuser.html');
+  res.sendFile(__dirname + '/views/updateuser.html');
 });
 
 app.post('/updateuserinfo', ensureAuthenticated, async (req, res) => {
@@ -383,7 +383,7 @@ const weeklycateringschema = new mongoose.Schema({
 const weeklyposting = mongoose.model('weeklyposting', weeklycateringschema);
 
 app.get('/caterpost', ensureAuthenticated, (req, res) => {
-  res.sendFile(__dirname + '/caterpost.html');
+  res.sendFile(__dirname + '/views/caterpost.html');
 });
 ////CaterPost
 //Will need async await for database later
@@ -475,7 +475,7 @@ const menupostschema = mongoose.Schema({
 const menupost = mongoose.model('menupost', menupostschema);
 //Detailed Menupost
 app.get('/menupost', ensureAuthenticated, (req, res) => {
-  res.sendFile(__dirname + '/menupost.html');
+  res.sendFile(__dirname + '/views/menupost.html');
 });
 
 app.post(
@@ -684,7 +684,7 @@ app.post('/searchmenu', ensureAuthenticated, async (req, res) => {
 ////About page
 //////
 app.get('/about', (req, res) => {
-  res.sendFile(__dirname + '/about.html');
+  res.sendFile(__dirname + '/views/about.html');
 });
 
 ///////////////////////////////
