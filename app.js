@@ -36,8 +36,11 @@ app.use(
 );
 app.use(flash());
 
+//Global Vars
 app.use((req, res, next) => {
   res.locals.error = req.flash('error');
+  console.log('Its here');
+  console.log(res.locals.error);
   next();
 });
 app.use(passport.initialize());
@@ -83,7 +86,15 @@ mongoose
 //Server requests and responses
 //Landing page and Login
 app.get('/', (req, res) => {
-  res.render('startingpage');
+  let error24;
+  if (res.locals.error != '') {
+    error24 = 'Incorrect Credentials';
+  } else {
+    error24 = '';
+  }
+  res.render('startingpage', {
+    error24,
+  });
 });
 
 //////
@@ -162,7 +173,7 @@ passport.use(
       .then((user) => {
         if (!user) {
           res.locals.error = 'Email not found';
-          return done(null, false, { message: 'Email not found' });
+          return done(null, false, { message: 'Email not registered' });
         }
 
         // Match password
@@ -171,7 +182,7 @@ passport.use(
           if (isMatch) {
             return done(null, user);
           } else {
-            return done(null, false, { message: 'Password incorrect' });
+            return done(null, false, { message: 'Incoreect Password' });
           }
         });
       });
@@ -196,6 +207,7 @@ app.post('/login', (req, res, next) =>
     successRedirect: '/loginnext',
     failureRedirect: '/',
     session: true,
+    failureFlash: true,
   })(req, res, next)
 );
 

@@ -6,13 +6,15 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="/css/startingpage.css")
         link(rel="shortcut icon" type="image/png" href="/css/landingpagelogo.png")
+        script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js")
         title LandingPage
     body
         .firstbox
             .logo
             .signin
                 form(action="/login", method="POST")
-                    h1="Login"
+                    h1.loginheader="Login"
+                    p=`${error24}`
                     input(type="text" name="email" required)
                     label="Email"
                     input(type="text" name="password" required)
@@ -51,6 +53,8 @@ html(lang="en")
                     button.registerbutton.second
                         a(href='/registration') Register
                         
+        
+
 
                 
                     
