@@ -11,13 +11,13 @@ html(lang="en")
     body
         .firstbox
             .logo
+            button.signinbox(type="button") LogIn
             .signin
-                form(action="/login", method="POST")
-                    h1.loginheader="Login"
-                    p=`${error24}`
-                    input(type="text" name="email" required)
+                form.formclass(action="/login", method="POST")
+                    p.loginerror=`${error24}`
+                    input.inputclass(type="text" name="email" required)
                     label="Email"
-                    input(type="text" name="password" required)
+                    input.inputclass2(type="text" name="password" required)
                     label="Password"
                     button.loginbutton(type="submit") Login
                     p='Dont have an account?' 
@@ -52,7 +52,28 @@ html(lang="en")
                     p=`DineIn aims to provide different types of food. Choose from 100's of national and international food types. NEVER GET BORED. Taste different food everyday.`
                     button.registerbutton.second
                         a(href='/registration') Register
-                        
+
+        script.
+            $(document).ready(function(){
+                const errorval=$(".loginerror").val();
+
+                //Taking out the error message if the user focuses on the form
+                $(".formclass input").on("focus",function(){
+                    console.log("You focused");
+                    $(".loginerror").text("");
+                    console.log($(".loginerror").text(""));
+                });
+
+                $(".signin").slideUp(1);
+
+                $(".signinbox").on("click",function(){
+                    $(".signin").slideToggle(1500);
+                })
+
+                
+
+            //Jquery ready function ends here
+            })         
         
 
 

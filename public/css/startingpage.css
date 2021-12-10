@@ -31,6 +31,26 @@ body {
   position: relative;
 }
 
+.signinbox {
+  height: 40px;
+  width: 100px;
+  margin-left: 43%;
+  margin-top: 20px;
+  background-color: rebeccapurple;
+  border: 5px solid white;
+  border-radius: 30%;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: larger;
+  letter-spacing: 2px;
+}
+
+.signinbox:hover {
+  color: rebeccapurple;
+  background-color: white;
+}
+
 .signin {
   width: 20%;
   height: 250px;
@@ -39,11 +59,14 @@ body {
   font-weight: bold;
   background-color: transparent;
   margin-left: 37%;
-  margin-top: 2%;
+  margin-top: 1%;
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 10px rebeccapurple;
 }
 
+.display {
+  display: none;
+}
 .signin input {
   color: white;
   width: 98%;
@@ -69,10 +92,21 @@ body {
   border-bottom: 3px solid rebeccapurple;
 }
 
+.loginerror {
+  color: red;
+  margin-left: 20%;
+}
+
+.inputclass {
+  margin-top: 30px;
+}
+.inputclass2 {
+  margin-top: 5px;
+}
 .loginbutton {
   width: 100%;
   height: 30px;
-  margin-top: 13px;
+  margin-top: 20px;
   border: 3px solid rebeccapurple;
   color: white;
   background-color: rebeccapurple;
