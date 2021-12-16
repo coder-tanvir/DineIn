@@ -40,7 +40,7 @@ body {
   margin-left: 43%;
   margin-top: 40px;
   background-color: transparent;
-  border: 1px solid rebeccapurple;
+  border: 2px solid rebeccapurple;
   color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
@@ -121,7 +121,7 @@ body {
 /* *******************Second box******************************* */
 .secondbox {
   width: 100%;
-  height: 300px;
+  height: 400px;
   background-color: white;
   justify-content: center;
   padding: 10px;
@@ -171,9 +171,8 @@ body {
   background-position: center;
 }
 .registerbutton {
-  height: 35px;
-  width: 90px;
-  border-radius: 15px;
+  height: 80px;
+  width: 340px;
   background-color: rebeccapurple;
   color: white;
   border: 0px;
@@ -193,10 +192,11 @@ body {
   text-decoration: none;
 }
 
-/* ************************************************** */
+/* *****************Third Box********************************* */
 .thirdbox {
   background-color: rebeccapurple;
   top: -10px;
+  border-bottom: 3px solid white;
   position: relative;
   width: 100%;
   height: 400px;
@@ -212,22 +212,19 @@ body {
   flex-wrap: wrap;
   filter: brightness(80%);
 }
-.rectangle1 {
-  background-image: url('highmain2.jpg');
-  background-size: cover;
-  background-position: center;
-  display: inline-block;
-  flex: 1 0 48%;
-  width: 50%;
-  height: 50%;
-}
+
 .rectangle2 {
   background-image: url('twoboxes.jpg');
   background-size: cover;
   background-position: center;
   flex: 1 0 48%;
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.rectangle2-animation {
+  animation: slideInRight;
+  animation-duration: 2s;
 }
 .rectangle3 {
   background-image: url('persian.jpg');
@@ -235,35 +232,33 @@ body {
   background-position: center;
   flex: 1 0 48%;
   width: 50%;
-  height: 50%;
-}
-.rectangle4 {
-  background-image: url('chinese.jpg');
-  background-size: cover;
-  background-position: center;
-  flex: 1 0 48%;
-  width: 50%;
-  height: 50%;
+  height: 100%;
 }
 
+.rectangle3-animation {
+  animation: slideDown;
+  animation-duration: 2.5s;
+}
 .thirdright {
   font-family: Georgia, 'Times New Roman', Times, serif;
   width: 40%;
+  padding: 10px;
+  line-height: 20px;
 }
 
 .thirright p {
   text-align: center;
   height: 100%;
-  font-size: 15px;
+  font-size: 25px;
 }
 
 .registerbutton.second {
-  height: 35px;
-  width: 90px;
+  height: 90px;
+  width: 180px;
   margin-left: 40%;
-  border-radius: 15px;
   background-color: white;
-  color: white;
+  color: rebeccapurple;
+  border: none;
 }
 
 .registerbutton.second:hover {

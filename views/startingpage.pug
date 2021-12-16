@@ -31,21 +31,18 @@ html(lang="en")
                 .rightblock2
                     h2='Serve your cravings, Save your time'
                     p='DineIn has hundred of home catering services, serving difeerent types of foods. Most of the catering services are homemade and made in homely environment. Services offer weekly menu and menu for very low price. Many of the services has their own delivery. Picking up is also an option. Processing time is as low as 1 day. Pay upon recieving the food. Just create an account, enter your area name and DONE! No more cooking.'
-                    button.registerbutton
-                        a(href='/registration') Register
+                    a.registerbutton(href='/registration') First Order
                 .rightblock3
 
         .thirdbox
                 .thirdleft
-                    .rectangle1
                     .rectangle2
                     .rectangle3 
-                    .rectangle4
                 .thirdright
                     h1='All that tastes good, are Appreciated'
                     p=`DineIn aims to provide different types of food. Choose from 100's of national and international food types. NEVER GET BORED. Taste different food everyday.`
-                    button.registerbutton.second
-                        a(href='/registration') Register
+                    a.registerbutton.second(href='/registration') Start Here
+                        
 
         .fourthbox
                 .leftblock1
@@ -83,7 +80,14 @@ html(lang="en")
                     $(".signin").slideToggle(1500);
                 })
 
-                
+                $(window).on("scroll",function(){
+                    var scroll2=$(window).scrollTop();
+                    console.log(scroll2)
+                    if(scroll2>=500){
+                        $(".rectangle2").addClass("rectangle2-animation");
+                        
+                    }
+                })
                 
 
             //Jquery ready function ends here
