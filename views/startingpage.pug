@@ -6,6 +6,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="/css/startingpage.css")
         link(rel="shortcut icon" type="image/png" href="/css/landingpagelogo.png")
+        link(rel="stylesheet" href="/css/animate.css")
         script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js")
         title LandingPage
     body
@@ -24,22 +25,15 @@ html(lang="en")
                         a(href='/registration')   Register 
                 p.invisible=`${count}`
         
-        .secondbox
-            .left
-                .leftblock1
-                .leftblock2
-                    h1='Partner with DineIn'
-                    p='Start a catering service with thousands of existing customers. Register, click on become a cater, provide some information e.g(Name, Area, Delivery options, Deals, any social media page, items,image,processing time and phone number) and you are good to go. Any service can post weekly menu or menu. Customers will call you seeing your menu. Prepare food and deliver or pickup. Customers pay you with cash. You pay us 0 dollars.'
-                    a.registerbutton(href='/registration') Register 
-
-                
+        .secondbox    
             .right
                 .rightblock1
                 .rightblock2
-                    h1='Serve your cravings,saving time'
-                    p='DineIn has hundred of home catering services, serving difeerent types of foods. Most of the catering services are homemade and made in homely environment. Services offer weekly menu and menu for very low price. Many of the services has their own delivery. Picking up is also an option. Processing time is as low as 1 day. Pay with upon recieving the food. Just create an account, enter your area name and DONE! No more cooking.'
+                    h2='Serve your cravings, Save your time'
+                    p='DineIn has hundred of home catering services, serving difeerent types of foods. Most of the catering services are homemade and made in homely environment. Services offer weekly menu and menu for very low price. Many of the services has their own delivery. Picking up is also an option. Processing time is as low as 1 day. Pay upon recieving the food. Just create an account, enter your area name and DONE! No more cooking.'
                     button.registerbutton
                         a(href='/registration') Register
+                .rightblock3
 
         .thirdbox
                 .thirdleft
@@ -52,6 +46,13 @@ html(lang="en")
                     p=`DineIn aims to provide different types of food. Choose from 100's of national and international food types. NEVER GET BORED. Taste different food everyday.`
                     button.registerbutton.second
                         a(href='/registration') Register
+
+        .fourthbox
+                .leftblock1
+                .leftblock2
+                    h1='Partner with DineIn'
+                    p='Start a catering service with thousands of existing customers. Register, click on become a cater, provide some information e.g(Name, Area, Delivery options, Deals, any social media page, items,image,processing time and phone number) and you are good to go. Any service can post weekly menu or menu. Customers will call you seeing your menu. Prepare food and deliver or pickup. Customers pay you with cash. You pay us 0 dollars.'
+                    a.registerbutton(href='/registration') Register 
 
         script.
             $(document).ready(function(){
@@ -67,6 +68,15 @@ html(lang="en")
                 if(count20 == 1){
                     $(".signin").slideUp(1);
                 }
+
+                $(window).on("scroll",function(){
+                    var scroll=$(window).scrollTop();
+                    console.log(scroll);
+                    if(scroll>=100){
+                        $(".left").addClass("leftblock-animation");
+                        $(".right").addClass("rightblock-animation");
+                    }
+                })
 
                 $(".signinbox").on("click",function(){
                     
