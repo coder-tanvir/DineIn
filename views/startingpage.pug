@@ -22,6 +22,7 @@ html(lang="en")
                     button.loginbutton(type="submit") Login
                     p='Dont have an account?' 
                         a(href='/registration')   Register 
+                p.invisible=`${count}`
         
         .secondbox
             .left
@@ -29,8 +30,7 @@ html(lang="en")
                 .leftblock2
                     h1='Partner with DineIn'
                     p='Start a catering service with thousands of existing customers. Register, click on become a cater, provide some information e.g(Name, Area, Delivery options, Deals, any social media page, items,image,processing time and phone number) and you are good to go. Any service can post weekly menu or menu. Customers will call you seeing your menu. Prepare food and deliver or pickup. Customers pay you with cash. You pay us 0 dollars.'
-                    button.registerbutton
-                        a(href='/registration') Register
+                    a.registerbutton(href='/registration') Register 
 
                 
             .right
@@ -55,21 +55,25 @@ html(lang="en")
 
         script.
             $(document).ready(function(){
-                const errorval=$(".loginerror").val();
-
+                let errorval=$(".loginerror").val();
+                let count20=$(".invisible").text();
+                console.log(count20);
                 //Taking out the error message if the user focuses on the form
                 $(".formclass input").on("focus",function(){
                     console.log("You focused");
                     $(".loginerror").text("");
                     console.log($(".loginerror").text(""));
                 });
-
-                $(".signin").slideUp(1);
+                if(count20 == 1){
+                    $(".signin").slideUp(1);
+                }
 
                 $(".signinbox").on("click",function(){
+                    
                     $(".signin").slideToggle(1500);
                 })
 
+                
                 
 
             //Jquery ready function ends here

@@ -36,9 +36,11 @@ app.use(
 );
 app.use(flash());
 
+global.count = 0;
 //Global Vars
 app.use((req, res, next) => {
   res.locals.error = req.flash('error');
+
   console.log('Its here');
   console.log(res.locals.error);
   next();
@@ -86,6 +88,8 @@ mongoose
 //Server requests and responses
 //Landing page and Login
 app.get('/', (req, res) => {
+  count = count + 1;
+  console.log(count);
   let error24;
   if (res.locals.error != '') {
     error24 = 'Incorrect Credentials';
@@ -94,6 +98,7 @@ app.get('/', (req, res) => {
   }
   res.render('startingpage', {
     error24,
+    count,
   });
 });
 

@@ -4,11 +4,13 @@ body {
   padding: 0;
   border: 0;
   outline: 0;
-  height: 100%;
-  width: 100%;
+
   background-color: rebeccapurple;
 }
 
+.invisible {
+  display: none;
+}
 .logo {
   height: 250px;
   width: 400px;
@@ -21,7 +23,7 @@ body {
 .firstbox {
   margin-top: 0;
   width: 101.5%;
-  height: 600px;
+  height: 800px;
   background-color: burlywood;
   background-image: url('startingpage27.png');
   background-size: cover;
@@ -32,13 +34,12 @@ body {
 }
 
 .signinbox {
-  height: 40px;
-  width: 100px;
+  height: 50px;
+  width: 120px;
   margin-left: 43%;
-  margin-top: 20px;
-  background-color: rebeccapurple;
-  border: 5px solid white;
-  border-radius: 30%;
+  margin-top: 40px;
+  background-color: transparent;
+  border: 1px solid rebeccapurple;
   color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
