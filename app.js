@@ -699,6 +699,12 @@ app.get('/about', (req, res) => {
   res.sendFile(__dirname + '/views/about.html');
 });
 
+////////page not found
+
+app.get('*', (req, res) => {
+  res.render('allelse');
+});
+
 ///////////////////////////////
 //Server of the application
 const port = 8080;
