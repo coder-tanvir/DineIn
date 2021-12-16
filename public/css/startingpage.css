@@ -5,7 +5,7 @@ body {
   border: 0;
   outline: 0;
 
-  background-color: rebeccapurple;
+  background-color: white;
 }
 
 .invisible {
@@ -196,7 +196,7 @@ body {
 .thirdbox {
   background-color: rebeccapurple;
   top: -10px;
-  border-bottom: 3px solid white;
+
   position: relative;
   width: 100%;
   height: 400px;
@@ -222,10 +222,6 @@ body {
   height: 100%;
 }
 
-.rectangle2-animation {
-  animation: slideInRight;
-  animation-duration: 2s;
-}
 .rectangle3 {
   background-image: url('persian.jpg');
   background-size: cover;
@@ -236,7 +232,7 @@ body {
 }
 
 .rectangle3-animation {
-  animation: slideDown;
+  animation: slideInRight;
   animation-duration: 2.5s;
 }
 .thirdright {
@@ -259,10 +255,12 @@ body {
   background-color: white;
   color: rebeccapurple;
   border: none;
+  z-index: 3;
 }
 
 .registerbutton.second:hover {
   border: 5px solid salmon;
+  z-index: 5;
 }
 
 .thirdbox a {
@@ -270,10 +268,16 @@ body {
 }
 
 /**************Fourth Box******************************/
-.left {
-  width: 10%;
-  height: 100%;
+
+.fourthbox {
+  width: 100%;
+  height: 300px;
+  margin-left: 12%;
+  background-color: white;
+  color: rebeccapurple;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .leftblock2 {
@@ -294,7 +298,24 @@ body {
   height: 200px;
 }
 
-.leftblock-animation {
+.fourthbox p {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.fourthbox-animation {
   animation: slideInLeft;
   animation-duration: 3s;
+}
+
+/*******Footer************/
+.footer {
+  height: 120px;
+  width: 100%;
+  background-color: rebeccapurple;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  padding: 5px;
 }

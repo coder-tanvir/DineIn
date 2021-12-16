@@ -35,21 +35,26 @@ html(lang="en")
                 .rightblock3
 
         .thirdbox
-                .thirdleft
-                    .rectangle2
-                    .rectangle3 
-                .thirdright
-                    h1='All that tastes good, are Appreciated'
-                    p=`DineIn aims to provide different types of food. Choose from 100's of national and international food types. NEVER GET BORED. Taste different food everyday.`
-                    a.registerbutton.second(href='/registration') Start Here
+            .thirdleft
+                .rectangle2
+                .rectangle3 
+            .thirdright
+                h1='All that tastes good, are Appreciated'
+                p=`DineIn aims to provide different types of food. Choose from 100's of national and international food types. NEVER GET BORED. Taste different food everyday. Prices are very low, You don't save much from shooping and cooking. Taste also matters`
+                a.registerbutton.second(href='/registration') Start Here
                         
 
         .fourthbox
-                .leftblock1
-                .leftblock2
-                    h1='Partner with DineIn'
-                    p='Start a catering service with thousands of existing customers. Register, click on become a cater, provide some information e.g(Name, Area, Delivery options, Deals, any social media page, items,image,processing time and phone number) and you are good to go. Any service can post weekly menu or menu. Customers will call you seeing your menu. Prepare food and deliver or pickup. Customers pay you with cash. You pay us 0 dollars.'
-                    a.registerbutton(href='/registration') Register 
+            .leftblock1
+            .leftblock2
+                h1='Partner with DineIn'
+                p='Start a catering service with thousands of existing customers. Register, click on become a cater, provide some information e.g(Name, Area, Delivery options, Deals, any social media page, items,image,processing time and phone number) and you are good to go. Any service can post weekly menu or menu. Customers will call you seeing your menu. Prepare food for delivery or pickup. Customers pay you with cash or e-transfer. You pay us 0 dollars.'
+                a.registerbutton(href='/registration') Partner Up 
+        
+        .footer
+            h3='DineIn'
+            h4='Available At Vancouber, British colombia'
+            p='Contact US: +12368866501'
 
         script.
             $(document).ready(function(){
@@ -65,6 +70,8 @@ html(lang="en")
                 if(count20 == 1){
                     $(".signin").slideUp(1);
                 }
+
+                $(".rectangle2").slideUp(1);
 
                 $(window).on("scroll",function(){
                     var scroll=$(window).scrollTop();
@@ -84,11 +91,18 @@ html(lang="en")
                     var scroll2=$(window).scrollTop();
                     console.log(scroll2)
                     if(scroll2>=500){
-                        $(".rectangle2").addClass("rectangle2-animation");
+                        $(".rectangle2").slideDown(3000);
+                        $(".rectangle3").addClass("rectangle3-animation");
                         
                     }
                 })
                 
+                $(window).on("scroll",function(){
+                    var scroll3=$(window).scrollTop();
+                    if(scroll3>=920){
+                        $(".fourthbox").addClass("fourthbox-animation");
+                    }
+                })
 
             //Jquery ready function ends here
             })         
