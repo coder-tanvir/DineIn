@@ -69,6 +69,11 @@ html(lang="en")
                 p=`PhoneNumber: +12368866501`
                 p=`Email:DineIn@canada.com`
             .box4
+                h2=`Links`
+                a(href="/registration") Register 
+                a(href="/updateuserinfo") Update userInfo.
+                a(href="/searchweeklymenu") Search Weekly Menu
+                a(href="/searchmenu") Search Menu
 
         script.
             $(document).ready(function(){
@@ -115,6 +120,14 @@ html(lang="en")
                     var scroll3=$(window).scrollTop();
                     if(scroll3>=920){
                         $(".fourthbox").addClass("fourthbox-animation");
+                    }
+                })
+
+                //Footer
+                $(window).on("scroll",function(){
+                    var scroll4=$(window).scrollTop();
+                    if(scroll4>=1200){
+                        $(".footer").fadeIn(2000);
                     }
                 })
 

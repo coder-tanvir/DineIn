@@ -4,7 +4,6 @@ body {
   padding: 0;
   border: 0;
   outline: 0;
-
   background-color: whitesmoke;
 }
 
@@ -46,6 +45,7 @@ body {
   font-weight: bold;
   font-size: larger;
   letter-spacing: 2px;
+  transition: 2.5s;
 }
 
 .signinbox:hover {
@@ -147,7 +147,7 @@ body {
   height: 240px;
   border-radius: 50%;
   border: 2px solid white;
-  background-image: url('dishes2.jpg');
+  background-image: url('secondleft.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -166,7 +166,7 @@ body {
   height: 240px;
   border-radius: 50%;
   border: 2px solid white;
-  background-image: url('dishes2.jpg');
+  background-image: url('secondright.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -322,24 +322,24 @@ body {
   );
   color: white;
   font-weight: bolder;
-  padding: 5px;
+  padding: 10px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .box1 {
   width: 20%;
-  margin-left: 20px;
+  margin-left: 25px;
+  border: none;
   height: 100%;
-  border: 1px solid rebeccapurple;
-}
-.box1 {
   letter-spacing: 1px;
 }
+
 .footer p {
   font-size: 15px;
   line-height: 10px;
@@ -352,19 +352,35 @@ body {
 }
 .box2 {
   width: 20%;
-  margin-left: 10px;
-  border: 1px solid rebeccapurple;
+  margin-left: 25px;
+  border: none;
+  border-left: 3px solid white;
   height: 100%;
   text-align: center;
 }
 .box3 {
   width: 20%;
-  margin-left: 10px;
+  margin-left: 25px;
+  border: none;
+  border-left: 3px solid white;
   height: 100%;
   text-align: center;
 }
 .box4 {
   width: 20%;
-  margin-left: 10px;
+  margin-left: 25px;
+  border: none;
+  border-left: 3px solid white;
   height: 100%;
+
+  text-align: center;
+}
+
+.box4 a {
+  color: white;
+  display: flex;
+  text-align: center;
+  line-height: 20px;
+  text-decoration: underline;
+  justify-content: center;
 }
