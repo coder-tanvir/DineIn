@@ -92,26 +92,27 @@ input:focus {
 }
 
 .submitbutton {
-  background-color: blueviolet;
-  color: #fff;
-  border: 2px solid rgb(216, 2, 134);
+  background-color: whitesmoke;
+  color: coral;
+  font-size: 30px;
+  font-weight: bolder;
+  border: 2px solid rebeccapurple;
   border-radius: 0px;
   padding: 18px 36px;
-
   width: 100%;
   display: inline-block;
   font-family: 'Lucida Console', Monaco, monospace;
   font-size: 14px;
   letter-spacing: 1px;
   cursor: pointer;
-  box-shadow: inset 0 0 0 0 #d80286;
+  box-shadow: inset 0 0 0 0 rebeccapurple;
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
 }
 
 .submitbutton:hover {
-  box-shadow: inset 1530px 0 0 0 #d80286;
+  box-shadow: inset 1530px 0 0 0 rebeccapurple;
 }
 
 .menuformat {
