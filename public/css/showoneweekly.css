@@ -78,8 +78,9 @@
   flex-direction: column;
   height: 400px;
   width: 100%;
-  background-color: beige;
+  background-color: transparent;
   border-radius: 50%;
+  border: cornsilk solid 3px;
   justify-content: center;
   font-size: 5px;
   box-shadow: 2px 2px 8px 2px #000;
@@ -96,8 +97,8 @@
   border-radius: 50%;
   height: 300px;
   width: 270px;
-  border: cornsilk solid 2px;
-  background-color: #d2d2d2;
+  border: cornsilk solid 3px;
+  background-color: transparent;
   font-size: 1rem;
   box-shadow: 0 0 10px 10px #cfcfcf;
   justify-content: center;
@@ -117,11 +118,11 @@
   color: aquamarine;
 }
 .menu3 {
-  color: cornflowerblue;
+  color: black;
 }
 
 .inner_plate p {
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .information {
@@ -130,5 +131,6 @@
 }
 
 .small {
-  font-size: 12px;
+  font-size: 15px;
+  font-weight: 900;
 }

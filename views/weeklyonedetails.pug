@@ -5,10 +5,11 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel='stylesheet' href='/css/showoneweekly.css')
+        link(rel="shortcut icon" type="image/png" href="/css/landingpagelogo.png")
         title Detailed WeeklyMenu
     body(style=`background-image:url(../uploads/${caterpostone.avatar})`)
         .topnav
-            a.active(href='#home') Home
+            a.active(href='#home') DineIn
             
 
         .eggbox(style=`background-image:url(../uploads/${caterpostone.avatar})`)
@@ -22,7 +23,7 @@ html(lang="en")
         .plate_container
             .plate
                 span.inner_plate
-                    h1.menu1=`🍽️ Menu 1:${caterpostone.price}`
+                    h1.menu1=`🍽️ ${caterpostone.price}`
                         p.small=`Mon:${caterpostone.mondaytitem}`
                         p.small=`Tue:${caterpostone.tuesdayitem}`
                         p.small=`Wed:${caterpostone.wednesdayitem}`
@@ -33,7 +34,7 @@ html(lang="en")
 
             .plate
                 span.inner_plate
-                    h1.menu1=`🍽️ Menu 2:${caterpostone.men2uprice}`
+                    h1.menu2=`🍽️ ${caterpostone.men2uprice}`
                         p.small=`Mon:${caterpostone.menu2mondaytitem}`
                         p.small=`Tue:${caterpostone.menu2tuesdayitem}`
                         p.small=`Wed:${caterpostone.menu2wednesdayitem}`
@@ -44,7 +45,7 @@ html(lang="en")
 
             .plate
                 span.inner_plate
-                    h1.menu1=`🍽️ Menu 3:${caterpostone.menu3price}`
+                    h1.menu3=`🍽️ ${caterpostone.menu3price}`
                         p.small=`Mon:${caterpostone.menu3mondaytitem}`
                         p.small=`Tue:${caterpostone.menu3tuesdayitem}`
                         p.small=`Wed:${caterpostone.menu3wednesdayitem}`
