@@ -177,6 +177,7 @@ body {
   background-color: rebeccapurple;
   color: white;
   border: 0px;
+  font-size: 20px;
 }
 
 .registerbutton:hover {
@@ -250,13 +251,14 @@ body {
 }
 
 .registerbutton.second {
-  height: 90px;
-  width: 180px;
+  height: 190px;
+  width: 230px;
   margin-left: 40%;
-  background-color: white;
-  color: rebeccapurple;
+  background-color: rebeccapurple;
+  color: white;
   border: none;
   z-index: 3;
+  font-size: 20px;
 }
 
 .registerbutton.second:hover {
