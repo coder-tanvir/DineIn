@@ -4,6 +4,7 @@ body {
   padding: 0;
   border: 0;
   outline: 0;
+  overflow-x: hidden;
   background-color: whitesmoke;
 }
 
