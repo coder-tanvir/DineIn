@@ -21,7 +21,7 @@ html(lang="en")
                     input.inputclass2(type="text" name="password" required)
                     label="Password"
                     button.loginbutton(type="submit") Login
-                    p='Dont have an account?' 
+                    p.haveaccount='Dont have an account?' 
                         a(href='/registration')   Register 
                 p.invisible=`${count}`
         
@@ -121,6 +121,11 @@ html(lang="en")
                     if(scroll3>=920){
                         $(".fourthbox").addClass("fourthbox-animation");
                     }
+                })
+
+                //Window size
+                $(window).on("resize",function(){
+                    console.log($(window).width());
                 })
 
                 //Footer

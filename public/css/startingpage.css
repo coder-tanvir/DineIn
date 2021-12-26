@@ -19,7 +19,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 10px;
-  margin-left: 34%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .firstbox {
   margin-top: 0;
@@ -37,7 +38,7 @@ body {
 .signinbox {
   height: 50px;
   width: 120px;
-  margin-left: 43%;
+  margin-left: 46%;
   margin-top: 40px;
   background-color: transparent;
   border: 2px solid rebeccapurple;
@@ -61,7 +62,8 @@ body {
   font-size: large;
   font-weight: bold;
   background-color: transparent;
-  margin-left: 37%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 1%;
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 10px rebeccapurple;
@@ -390,21 +392,52 @@ body {
 
 /****************Media queries******************/
 
+/**********First Box***************/
+@media only screen and (max-width: 400px) {
+  .haveaccount {
+    display: none;
+  }
+  .firstbox {
+    width: 40%;
+  }
+}
+
 /***Second box is responsive***/
 @media only screen and (max-width: 965px) {
   .secondbox {
     height: 350px;
   }
+
   .rightblock2 {
     font-size: 14px;
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .secondbox {
+    height: 350px;
+  }
+
+  .rightblock2 {
+    font-size: 10px;
+    font-weight: bolder;
+  }
+}
 /******Third box only shows one image***********/
 
 @media only screen and (max-width: 920px) {
   .rectangle3 {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .rectangle3 {
+    display: none;
+  }
+  .thirdright {
+    font-size: 12px;
+    font-weight: bolder;
   }
 }
 
@@ -415,5 +448,15 @@ body {
   }
   .fourthbox p {
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .leftblock1 {
+    display: none;
+  }
+  .fourthbox p {
+    font-size: 10px;
+    font-weight: bolder;
   }
 }
