@@ -1,3 +1,7 @@
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .topnav {
   background-color: none;
   overflow: hidden;
