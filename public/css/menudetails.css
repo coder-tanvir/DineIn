@@ -1,3 +1,7 @@
+body {
+  background-size: cover;
+  background-position: center;
+}
 .topnav {
   background-color: none;
   overflow: hidden;
@@ -21,7 +25,6 @@
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #9932cc;
   color: white;
 }
 
@@ -88,13 +91,11 @@
   width: 20%;
   height: 450px;
   border: 0.2px;
-
   transform: 0.5s ease-in-out;
 }
 
 .appetizers:hover {
   transform: translateY(20px);
-  zoom: 150%;
   font-weight: 800;
   text-shadow: black;
 }
@@ -102,8 +103,8 @@
 .appetizers p:hover {
   opacity: 1;
   font-style: italic;
-  color: blue;
-  zoom: 130%;
+  color: rebeccapurple;
+  zoom: 120%;
 }
 
 .meats {
@@ -114,8 +115,6 @@
 
 .meats:hover {
   transform: translateY(20px);
-  zoom: 150%;
-
   font-weight: 800;
   text-shadow: black;
 }
@@ -123,7 +122,7 @@
 .meats p:hover {
   opacity: 1;
   font-style: italic;
-  color: blue;
+  color: rebeccapurple;
   zoom: 130%;
 }
 
@@ -134,8 +133,6 @@
 }
 .dishes:hover {
   transform: translateY(20px);
-  zoom: 150%;
-
   font-weight: 800;
   text-shadow: black;
 }
@@ -143,7 +140,7 @@
 .dishes p:hover {
   opacity: 1;
   font-style: italic;
-  color: blue;
+  color: rebeccapurple;
   zoom: 130%;
 }
 
@@ -154,8 +151,6 @@
 }
 .desserts:hover {
   transform: translateY(20px);
-  zoom: 150%;
-
   font-weight: 800;
   text-shadow: black;
 }
@@ -163,7 +158,7 @@
 .desserts p:hover {
   opacity: 1;
   font-style: italic;
-  color: blue;
+  color: rebeccapurple;
   zoom: 130%;
 }
 

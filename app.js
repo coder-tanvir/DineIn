@@ -87,7 +87,7 @@ mongoose
   });
 
 const weeklyposting = require('./models/weeklyModel');
-
+const menupost = require('./models/menuModel');
 //Server requests and responses
 //Landing page and Login
 app.get('/', (req, res) => {
@@ -306,49 +306,8 @@ app.post('/caterpost', upload.single('avatar'), async (req, res) => {
 
   newpost.save();
   res.redirect('showweeklymenus');
-  //db.res.redirect('/');
 });
 
-//////////////////////////////////////////////
-///Menu Post Schema
-const menupostschema = mongoose.Schema({
-  servicename: {
-    type: String,
-    required: [true, 'A service must have a name'],
-  },
-  phonenumber: {
-    type: String,
-    required: [true, 'A service must have a phonenumber'],
-  },
-  typeoffood: {
-    type: String,
-    required: [true, 'A service must have a cuisine type'],
-  },
-  servicemethod: {
-    type: String,
-    required: [true, 'A Business must have service method'],
-  },
-  processingtime: {
-    type: String,
-    required: [true, 'Specify processing time for more views'],
-  },
-  area: {
-    type: String,
-    required: [true, 'A service must have a name'],
-  },
-  frequency: {
-    type: String,
-    required: [true, 'A service must have a name'],
-  },
-  avatar: {
-    type: String,
-  },
-  appetizers: [String],
-  meats: [String],
-  dishes: [String],
-  desserts: [String],
-});
-const menupost = mongoose.model('menupost', menupostschema);
 //Detailed Menupost
 app.get('/menupost', ensureAuthenticated, (req, res) => {
   res.sendFile(__dirname + '/views/menupost.html');
@@ -391,6 +350,7 @@ app.post(
       dishes: dishescopy,
       desserts: dessertscopy,
     });
+    res.redirect('/menuoverview');
   }
 );
 ////////
