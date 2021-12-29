@@ -88,6 +88,7 @@ mongoose
 
 const weeklyposting = require('./models/weeklyModel');
 const menupost = require('./models/menuModel');
+const users = require('./models/usersModel');
 //Server requests and responses
 //Landing page and Login
 app.get('/', (req, res) => {
@@ -104,54 +105,6 @@ app.get('/', (req, res) => {
     count,
   });
 });
-
-//////
-/////User schema
-const userschema = new mongoose.Schema({
-  email: {
-    type: String,
-    required: [true, 'A user must need an email'],
-    unique: true,
-    validate: [validator.isEmail, 'Please provide a valid email'],
-  },
-  password: {
-    type: String,
-    required: [true, 'Every user must have a password'],
-    minlength: 6,
-  },
-  phonenumber: {
-    type: String,
-    required: [true, 'We need the users numbers'],
-  },
-  address: {
-    type: String,
-    required: [true, 'Cannot deliver without an address'],
-  },
-  city: {
-    type: String,
-    required: [true, 'Need City name to filter services'],
-  },
-  weeklypost: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'weeklypostings',
-  },
-});
-
-userschema.pre('save', async function (next) {
-  if (!this.isModified('password')) return next();
-  this.password = await bcrypt.hash(this.password, 12);
-  next();
-});
-
-userschema.methods.correctpassword = async function (
-  candidatepassword,
-  userpassword
-) {
-  console.log(candidatepassword, userpassword);
-  return await bcrypt.compare(candidatepassword, userpassword);
-};
-
-const users = mongoose.model('users', userschema);
 
 app.get('/registration', (req, res) => {
   res.sendFile(__dirname + '/views/registration.html');
@@ -305,7 +258,7 @@ app.post('/caterpost', upload.single('avatar'), async (req, res) => {
   });
 
   newpost.save();
-  res.redirect('showweeklymenus');
+  res.redirect('/searchweeklymenu');
 });
 
 //Detailed Menupost
@@ -350,7 +303,7 @@ app.post(
       dishes: dishescopy,
       desserts: dessertscopy,
     });
-    res.redirect('/menuoverview');
+    res.redirect('/searchmenu');
   }
 );
 ////////
