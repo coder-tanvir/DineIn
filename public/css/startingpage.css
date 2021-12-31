@@ -317,14 +317,9 @@ body {
 .footer {
   height: 170px;
   width: 100%;
-  background-image: linear-gradient(
-    to right top,
-    #474845,
-    #41423e,
-    #3b3d38,
-    #363731,
-    #30322b
-  );
+  background-image: url('pastry.jpg');
+  background-size: cover;
+  background-position: center;
   color: white;
   font-weight: bolder;
   padding: 10px;

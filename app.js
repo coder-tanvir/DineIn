@@ -18,8 +18,6 @@ const LocalStrategy = require('passport-local').Strategy;
 const session = require('express-session');
 const flash = require('express-flash');
 
-//////Initiializing passport/////////////
-
 //Application start
 const app = express();
 //Application used middlewares:
@@ -27,7 +25,7 @@ app.use(express.static('public'));
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 app.use('/uploads', express.static('uploads'));
-
+//Passport helper functions
 app.use(
   session({
     secret: 'verygoodsecret',
@@ -36,20 +34,19 @@ app.use(
   })
 );
 app.use(flash());
-
-global.count = 0;
+//////////////////////////////////////////////////////////////////////////////////////
 //Global Vars
+global.count = 0;
 app.use((req, res, next) => {
   res.locals.error = req.flash('error');
-
   console.log('Its here');
   console.log(res.locals.error);
   next();
 });
 app.use(passport.initialize());
 app.use(passport.session());
+////////////////////////////////////////////////////////////////////////////////////////
 ///Templating Engine
-
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -89,7 +86,7 @@ mongoose
 const weeklyposting = require('./models/weeklyModel');
 const menupost = require('./models/menuModel');
 const users = require('./models/usersModel');
-//Server requests and responses
+///////////////////////////////////////Server requests and responses
 //Landing page and Login
 app.get('/', (req, res) => {
   count = count + 1;
@@ -105,7 +102,8 @@ app.get('/', (req, res) => {
     count,
   });
 });
-
+///////////////////////////////////////////////////////////////////////////////////////
+/////////////////Registration
 app.get('/registration', (req, res) => {
   res.sendFile(__dirname + '/views/registration.html');
 });
@@ -183,11 +181,15 @@ app.get('/logout', (req, res) => {
   req.logout();
   res.redirect('/');
 });
+
+////////////////////////////////////////////////////
+//////////////Page of all Links
 app.get('/loginnext', ensureAuthenticated, async (req, res) => {
   const user = await users.findById(req.user.id);
   res.render('loginnext');
 });
-
+/////////////////////////////////////////////////////
+//////////Update user info
 app.get('/updateuserinfo', ensureAuthenticated, async (req, res) => {
   const user = await users.findById(req.user.id);
   console.log('Get request', user);
@@ -206,15 +208,12 @@ app.post('/updateuserinfo', ensureAuthenticated, async (req, res) => {
 
 ////////////////////////////
 //////////////////////////////////////////
-///////////////////////////////////////////////
-///////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////
+//////////////////Weekly Menu Post/////////////////////////////
 
 app.get('/caterpost', ensureAuthenticated, (req, res) => {
   res.sendFile(__dirname + '/views/caterpost.html');
 });
-////CaterPost
-//Will need async await for database later
+
 app.post('/caterpost', upload.single('avatar'), async (req, res) => {
   const areainput = req.body.area;
   const arealower = areainput.toLowerCase();
@@ -261,83 +260,6 @@ app.post('/caterpost', upload.single('avatar'), async (req, res) => {
   res.redirect('/searchweeklymenu');
 });
 
-//Detailed Menupost
-app.get('/menupost', ensureAuthenticated, (req, res) => {
-  res.sendFile(__dirname + '/views/menupost.html');
-});
-
-app.post(
-  '/menupost',
-  ensureAuthenticated,
-  upload.single('avatar'),
-  async (req, res) => {
-    const var2 = req.body.servicename;
-    menudata = req.body;
-    let appetizerscopy = [];
-    let meatscopy = [];
-    let dishescopy = [];
-    let dessertscopy = [];
-
-    for (let attributename in menudata) {
-      if (attributename.includes('appetizer')) {
-        appetizerscopy.push(menudata[attributename]);
-      } else if (attributename.includes('meat')) {
-        meatscopy.push(menudata[attributename]);
-      } else if (attributename.includes('dishes')) {
-        dishescopy.push(menudata[attributename]);
-      } else if (attributename.includes('desserts')) {
-        dessertscopy.push(menudata[attributename]);
-      }
-    }
-    const newmenu = await menupost.create({
-      servicename: req.body.servicename,
-      phonenumber: req.body.phonenumber,
-      typeoffood: req.body.typeoffood,
-      area: req.body.area,
-      frequency: req.body.frequency,
-      processingtime: req.body.processingtime,
-      servicemethod: req.body.servicemethod,
-      avatar: req.file.filename,
-      appetizers: appetizerscopy,
-      meats: meatscopy,
-      dishes: dishescopy,
-      desserts: dessertscopy,
-    });
-    res.redirect('/searchmenu');
-  }
-);
-////////
-////////////////Menu services rendering///////////////
-app.get('/menuoverview', ensureAuthenticated, async (req, res) => {
-  const menus = await menupost.find();
-
-  res.render('menuoverview', {
-    menus,
-  });
-});
-
-/////////////Show one menu/////////////
-app.get('/menuoverview/:servicename', async (req, res) => {
-  const menuone = await menupost.findOne({
-    servicename: req.params.servicename,
-  });
-  res.render('menudetails', {
-    menuone,
-  });
-});
-
-/////////////////////////////////////////////////////
-/////Weekly Services Rendering
-
-app.get('/showweeklymenus', ensureAuthenticated, async (req, res) => {
-  const menus = await weeklyposting.find();
-
-  res.render('weeklymenus', {
-    menus,
-  });
-});
-
-//Showing the Details Of weekly menu
 app.get('/caterpost/:servicename', async (req, res) => {
   const caterpostone = await weeklyposting.findOne({
     servicename: req.params.servicename,
@@ -347,8 +269,7 @@ app.get('/caterpost/:servicename', async (req, res) => {
   });
 });
 
-////////////Updateing weekly menu
-
+////////////Update weekly post////////////
 app.get('/updateweeklypost', ensureAuthenticated, async (req, res) => {
   const user = req.user.id;
   const updatepost = await weeklyposting.findOne({ postedby: user });
@@ -359,6 +280,42 @@ app.get('/updateweeklypost', ensureAuthenticated, async (req, res) => {
   });
 });
 
+/////////////Searching weekly menu////////
+//////////////////////////////////
+///Adding searchbar
+app.get('/searchweeklymenu', ensureAuthenticated, async (req, res) => {
+  const menus = await weeklyposting.find();
+  res.render('searchweekly', {
+    menus,
+  });
+});
+
+app.post('/searchweeklymenu', ensureAuthenticated, async (req, res) => {
+  console.log(req.body.searchbar);
+  const input = req.body.searchbar;
+  const inputlower = input.toLowerCase();
+  const inputupper = input.toUpperCase();
+  console.log(inputupper);
+  const inputcopy = input;
+  const firstletter = inputcopy.charAt(0);
+  const firstletterupper = firstletter.toUpperCase();
+  const rest = inputcopy.slice(1);
+  const finalresult = firstletterupper + rest;
+  console.log(finalresult);
+  const menus = await weeklyposting.find({
+    $or: [
+      { area: { $regex: input } },
+      { area: { $regex: inputlower } },
+      { area: { $regex: inputupper } },
+      { area: { $regex: finalresult } },
+    ],
+  });
+  res.render('searchweekly', {
+    menus,
+  });
+});
+
+/////////////////Changing to update//////////////
 app.post('/updateweeklymenu', ensureAuthenticated, async (req, res) => {
   console.log('/////////////////////////////////////////////////////////////');
   console.log(req.body);
@@ -403,39 +360,67 @@ app.post('/updateweeklymenu', ensureAuthenticated, async (req, res) => {
   await post.save();
   res.redirect('/showweeklymenus');
 });
-//////////////////////////////////
-///Adding searchbar
-app.get('/searchweeklymenu', ensureAuthenticated, async (req, res) => {
-  const menus = await weeklyposting.find();
-  res.render('searchweekly', {
-    menus,
+
+///////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////// Menupost ////////////////////////////////////////////
+app.get('/menupost', ensureAuthenticated, (req, res) => {
+  res.sendFile(__dirname + '/views/menupost.html');
+});
+
+//////////////////////////////////////////////////
+/////////Saving menu post
+app.post(
+  '/menupost',
+  ensureAuthenticated,
+  upload.single('avatar'),
+  async (req, res) => {
+    const var2 = req.body.servicename;
+    menudata = req.body;
+    let appetizerscopy = [];
+    let meatscopy = [];
+    let dishescopy = [];
+    let dessertscopy = [];
+
+    for (let attributename in menudata) {
+      if (attributename.includes('appetizer')) {
+        appetizerscopy.push(menudata[attributename]);
+      } else if (attributename.includes('meat')) {
+        meatscopy.push(menudata[attributename]);
+      } else if (attributename.includes('dishes')) {
+        dishescopy.push(menudata[attributename]);
+      } else if (attributename.includes('desserts')) {
+        dessertscopy.push(menudata[attributename]);
+      }
+    }
+    const newmenu = await menupost.create({
+      servicename: req.body.servicename,
+      phonenumber: req.body.phonenumber,
+      typeoffood: req.body.typeoffood,
+      area: req.body.area,
+      frequency: req.body.frequency,
+      processingtime: req.body.processingtime,
+      servicemethod: req.body.servicemethod,
+      avatar: req.file.filename,
+      appetizers: appetizerscopy,
+      meats: meatscopy,
+      dishes: dishescopy,
+      desserts: dessertscopy,
+    });
+    res.redirect('/searchmenu');
+  }
+);
+
+/////////////Details of one menu/////////////
+app.get('/menuoverview/:servicename', async (req, res) => {
+  const menuone = await menupost.findOne({
+    servicename: req.params.servicename,
+  });
+  res.render('menudetails', {
+    menuone,
   });
 });
 
-app.post('/searchweeklymenu', ensureAuthenticated, async (req, res) => {
-  console.log(req.body.searchbar);
-  const input = req.body.searchbar;
-  const inputlower = input.toLowerCase();
-  const inputupper = input.toUpperCase();
-  console.log(inputupper);
-  const inputcopy = input;
-  const firstletter = inputcopy.charAt(0);
-  const firstletterupper = firstletter.toUpperCase();
-  const rest = inputcopy.slice(1);
-  const finalresult = firstletterupper + rest;
-  console.log(finalresult);
-  const menus = await weeklyposting.find({
-    $or: [
-      { area: { $regex: input } },
-      { area: { $regex: inputlower } },
-      { area: { $regex: inputupper } },
-      { area: { $regex: finalresult } },
-    ],
-  });
-  res.render('searchweekly', {
-    menus,
-  });
-});
+///////////////Searching Menu/////////////////////////////////////
 
 app.get('/searchmenu', ensureAuthenticated, async (req, res) => {
   const menus = await menupost.find();
@@ -470,12 +455,14 @@ app.post('/searchmenu', ensureAuthenticated, async (req, res) => {
   });
 });
 
+//////////////////////////////////////
 ////About page
-//////
+
 app.get('/about', (req, res) => {
   res.sendFile(__dirname + '/views/about.html');
 });
 
+///////////////////////////////////////////////
 ////////page not found
 
 app.get('*', (req, res) => {
